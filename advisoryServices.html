@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Advisory Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Ensure mobile responsiveness with simpler, more reliable media queries */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px !important;
+            }
+            /* Hero Section */
+            .hero-section {
+                padding: 50px 15px !important;
+            }
+            .hero-section h2 {
+                font-size: 28px !important;
+            }
+            .hero-section p {
+                font-size: 16px !important;
+            }
+
+            /* Services Overview */
+            #services {
+                padding: 40px 15px !important;
+            }
+            #services h2 {
+                font-size: 28px !important;
+            }
+            #services p {
+                font-size: 16px !important;
+            }
+            #services .services-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            /* Imagine the Possible */
+            .imagine-section {
+                padding: 40px 15px !important;
+            }
+            .imagine-section h2 {
+                font-size: 28px !important;
+            }
+            .imagine-section p {
+                font-size: 16px !important;
+            }
+            .imagine-section .circle-content {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            .imagine-section .circle-content > div:nth-child(1) {
+                text-align: center !important;
+                margin-right: 0 !important;
+                margin-bottom: 20px !important;
+            }
+            .imagine-section .circle-content > div:nth-child(3) {
+                text-align: center !important;
+                margin-left: 0 !important;
+                margin-top: 20px !important;
+            }
+            .imagine-section .circle-content > div:nth-child(2) > div:nth-child(1),
+            .imagine-section .circle-content > div:nth-child(2) > div:nth-child(3) {
+                display: none !important;
+            }
+            .imagine-section .circle-content > div:nth-child(2) > div:nth-child(2) {
+                margin: 0 auto !important;
+            }
+
+            /* Expertise Section */
+            .expertise-section {
+                padding: 40px 15px !important;
+            }
+            .expertise-section h2 {
+                font-size: 28px !important;
+            }
+            .expertise-section .expertise-grid {
+                gap: 20px !important;
+            }
+            .expertise-section .tech-grid {
+                gap: 15px !important;
+            }
+
+            /* Advisory Services and Insights */
+            .advisory-services, .insights-section {
+                padding: 30px 15px !important;
+            }
+            .advisory-services h2, .insights-section h2 {
+                font-size: 28px !important;
+            }
+            .advisory-services .advisory-grid, .insights-section .insights-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+            .advisory-services .advisory-grid > div, .insights-section .insights-grid > div {
+                flex-direction: column !important;
+            }
+            .advisory-services .advisory-grid img, .insights-section .insights-grid img {
+                width: 100% !important;
+            }
+
+            /* How It Works */
+            .how-it-works {
+                padding: 40px 15px !important;
+            }
+            .how-it-works h2 {
+                font-size: 28px !important;
+            }
+            .how-it-works .steps-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Advisors */
+            .advisors-section {
+                padding: 40px 15px !important;
+            }
+            .advisors-section h2 {
+                font-size: 28px !important;
+            }
+            .advisors-section .advisors-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Testimonials */
+            .testimonials-section {
+                padding: 40px 15px !important;
+            }
+            .testimonials-section h2 {
+                font-size: 28px !important;
+            }
+            .testimonials-section .testimonials-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* CTA */
+            .cta-section {
+                padding: 50px 15px !important;
+            }
+            .cta-section h2 {
+                font-size: 28px !important;
+            }
+
+            /* Additional Advisory Services */
+            .additional-advisory {
+                padding: 40px 15px !important;
+            }
+            .additional-advisory h2 {
+                font-size: 28px !important;
+            }
+            .additional-advisory .additional-grid {
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.6;">
+    <!-- Hero Section -->
+    <section class="hero-section" style="background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(13, 71, 161, 0.8)), url('https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F1c160d8c-6b7b-4ca3-9428-435107d283a7?csig=AAAAAAAAAAAAAAAAAAAAAEwm8hQEF9Ao-qVefzayViAxKFjKELhlBDLSwgeB1HR1&exp=1756655375&signer=media-rpc&token=AAIAAU0AJDFjMTYwZDhjLTZiN2ItNGNhMy05NDI4LTQzNTEwN2QyODNhNwAAAAABmQDR0phu4CLxbLMVn8VfV3UBmcQKrup2TrGMXJsZRvZ71-ApYA') center/cover; color: white; padding: 100px 20px; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 700; margin-bottom: 20px;">Strategic Advisory Services</h2>
+            <p style="font-size: 20px; margin-bottom: 30px;">Transform your business with our expert advisory services designed to drive growth and innovation.</p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" style="padding: 80px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; text-align: center; margin-bottom: 20px; color: #1e3a8a;">Our Advisory Services</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 18px; color: #475569;">We provide strategic guidance to help organizations navigate complex challenges and capitalize on new opportunities.</p>
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); transition: transform 0.3s;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-line" style="font-size: 60px; color: white;"></i>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 15px; color: #1e3a8a;">Strategic Planning</h3>
+                        <p style="margin-bottom: 20px; color: #475569;">Develop comprehensive strategies to achieve your business objectives and drive sustainable growth.</p>
+                        <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center;">
+                            Learn More <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); transition: transform 0.3s;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #10b981 0%, #047857 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-cogs" style="font-size: 60px; color: white;"></i>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 15px; color: #1e3a8a;">Operational Excellence</h3>
+                        <p style="margin-bottom: 20px; color: #475569;">Optimize your operations, reduce costs, and improve efficiency across your organization.</p>
+                        <a href="#" style="color: #10b981; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center;">
+                            Learn More <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                        </a>
+                    </div>
+                </div>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); transition: transform 0.3s;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-digital-tachograph" style="font-size: 60px; color: white;"></i>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 15px; color: #1e3a8a;">Digital Transformation</h3>
+                        <p style="margin-bottom: 20px; color: #475569;">Leverage technology to transform your business processes and create new value propositions.</p>
+                        <a href="#" style="color: #8b5cf6; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center;">
+                            Learn More <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imagine the Possible Section -->
+    <section class="imagine-section" style="padding: 80px 20px; background-color: #f1f5f9;">
+        <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #1e3a8a;">Imagine the Possible</h2>
+            <p style="font-size: 18px; line-height: 1.6; max-width: 900px; margin: 0 auto 40px; color: #475569;">
+                Leverage our best practice process, tools, and methodologies to help guide your organization 
+                through digital transformation from the discovery process of imagining and framing a solution, 
+                to delivering the optimal design for your organization, and providing the structural support 
+                to scale and sustain the value of the transformation over time.
+            </p>
+            <div class="circle-content" style="display: flex; justify-content: center; align-items: center; margin: 60px 0; flex-wrap: wrap;">
+                <div style="text-align: right; font-size: 16px; line-height: 1.8; margin-right: 40px;">
+                    <p style="margin: 12px 0; font-weight: 600;">Advisory: Imagine The Possible</p>
+                    <p style="margin: 12px 0;">Strategic Blueprint</p>
+                    <p style="margin: 12px 0;">Business Transformation</p>
+                    <p style="margin: 12px 0;">Executive Advisory</p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 40px; height: 2px; background: #ef4444; position: relative;">
+                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #ef4444; position: absolute; left: -6px; top: -6px;"></div>
+                    </div>
+                    <div style="width: 180px; height: 180px; border: 4px solid #ef4444; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: white;">
+                        <h3 style="margin: 0; font-size: 18px; font-weight: 700; color: #1e3a8a;">Advisory<br>Service</h3>
+                        <p style="margin: 8px 0; font-size: 14px; color: #475569;">Imagine The<br>Possible</p>
+                        <div style="margin-top: 10px; width: 40px; height: 40px; background: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                    </div>
+                    <div style="width: 40px; height: 2px; background: #ef4444;"></div>
+                </div>
+                <div style="text-align: left; font-size: 16px; line-height: 1.8; margin-left: 40px;">
+                    <p style="margin: 12px 0;">Change Management</p>
+                    <p style="margin: 12px 0;">Performance Improvement</p>
+                    <p style="margin: 12px 0; font-weight: 600;">Organizational Design</p>
+                    <p style="margin: 12px 0;">Risk Assessment</p>
+                </div>
+            </div>
+            <h2 style="font-size: 24px; font-weight: 700; margin: 40px auto 20px; max-width: 700px; line-height: 1.4; color: #1e3a8a;">
+                Services to drive digital transformation and achieve optimal performance.
+            </h2>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-section" style="padding: 80px 20px; background: white;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; margin-bottom: 20px; color: #1e3a8a;">Our Areas of Expertise</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 18px; color: #475569;">We provide specialized advisory services across multiple domains to address your unique business challenges.</p>
+            <div class="expertise-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-bottom: 60px;">
+                <div style="text-align: center; flex: 0 0 160px;">
+                    <div style="width: 100px; height: 100px; background: #f39c12; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 auto; font-size: 20px; box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);">
+                        EPM
+                    </div>
+                    <p style="margin-top: 15px; font-size: 16px; color: #1e3a8a; font-weight: 600;">Enterprise Performance</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #475569;">Technical Certified Experts</p>
+                </div>
+                <div style="text-align: center; flex: 0 0 160px;">
+                    <div style="width: 100px; height: 100px; background: #27ae60; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 auto; font-size: 20px; box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);">
+                        ERP
+                    </div>
+                    <p style="margin-top: 15px; font-size: 16px; color: #1e3a8a; font-weight: 600;">Enterprise Planning</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #475569;">Fit-to-Modern Process Best Practice</p>
+                </div>
+                <div style="text-align: center; flex: 0 0 160px;">
+                    <div style="width: 100px; height: 100px; background: #16a085; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 auto; font-size: 20px; box-shadow: 0 5px 15px rgba(22, 160, 133, 0.3);">
+                        SCM
+                    </div>
+                    <p style="margin-top: 15px; font-size: 16px; color: #1e3a8a; font-weight: 600;">Supply Chain</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #475569;">Optimization Solutions</p>
+                </div>
+                <div style="text-align: center; flex: 0 0 160px;">
+                    <div style="width: 100px; height: 100px; background: #2980b9; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 auto; font-size: 20px; box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);">
+                        HCM
+                    </div>
+                    <p style="margin-top: 15px; font-size: 16px; color: #1e3a8a; font-weight: 600;">Human Capital</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #475569;">Quality Delivery Methodology</p>
+                </div>
+                <div style="text-align: center; flex: 0 0 160px;">
+                    <div style="width: 100px; height: 100px; background: #c0392b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 auto; font-size: 20px; box-shadow: 0 5px 15px rgba(192, 57, 43, 0.3);">
+                        CX
+                    </div>
+                    <p style="margin-top: 15px; font-size: 16px; color: #1e3a8a; font-weight: 600;">Customer Experience</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #475569;">Engagement Transformation</p>
+                </div>
+                <div style="text-align: center; flex: 0 0 160px;">
+                    <div style="width: 100px; height: 100px; background: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 auto; font-size: 20px; box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);">
+                        TSS
+                    </div>
+                    <p style="margin-top: 15px; font-size: 16px; color: #1e3a8a; font-weight: 600;">Technology Solutions</p>
+                    <p style="margin-top: 5px; font-size: 14px; color: #475569;">Industry Leading Practice</p>
+                </div>
+            </div>
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 24px; margin: 60px 0 30px; color: #1e3a8a;">Supported by Cutting-Edge Technologies</h3>
+            <div class="tech-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+                <div style="width: 90px; height: 90px; border: 2px solid #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #1e3a8a; font-weight: 600; background: #dbeafe;">Reporting</div>
+                <div style="width: 90px; height: 90px; border: 2px solid #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #065f46; font-weight: 600; background: #d1fae5;">RPA</div>
+                <div style="width: 90px; height: 90px; border: 2px solid #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5b21b6; font-weight: 600; background: #ede9fe;">AI</div>
+                <div style="width: 90px; height: 90px; border: 2px solid #ec4899; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #9d174d; font-weight: 600; background: #fce7f3; text-align: center; padding: 5px;">Machine Learning</div>
+                <div style="width: 90px; height: 90px; border: 2px solid #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #92400e; font-weight: 600; background: #fef3c7;">Analytics</div>
+                <div style="width: 90px; height: 90px; border: 2px solid #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #b91c1c; font-weight: 600; background: #fee2e2;">Cloud</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Services Section -->
+    <div class="advisory-services" style="padding: 40px 20px; max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; font-size: 28px; font-weight: bold; margin-bottom: 30px;">Advisory Services</h2>
+        <div class="advisory-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 20px;">
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src="images/advisoryservices.jpg" alt="Advisory 1" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #333; font-weight: 500;">
+                        Strategic Business Roadmaps: Helping organizations align their IT strategy with business growth through expert advisory services.
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #333; color: #fff; border-radius: 20px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src="images/advisoryservices2.jpg" alt="Advisory 2" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #333; font-weight: 500;">
+                        Digital Transformation Advisory: Driving innovation and operational efficiency with cloud-based consulting frameworks.
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #333; color: #fff; border-radius: 20px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src="images/advisoryservices3.jpg" alt="Advisory 3" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #333; font-weight: 500;">
+                        Risk & Compliance Guidance: Expert consulting to ensure regulatory compliance and mitigate business risks.
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #333; color: #fff; border-radius: 20px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <img src="images/advisoryservices4.jpg" alt="Advisory 4" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #333; font-weight: 500;">
+                        Cloud Strategy & Advisory: Unlocking business value by creating effective multi-cloud and hybrid strategies.
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #333; color: #fff; border-radius: 20px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <button style="padding: 10px 24px; border: none; background: #333; color: #fff; border-radius: 25px; cursor: pointer;">Read More</button>
+        </div>
+    </div>
+
+    <!-- Insights Section -->
+    <div class="insights-section" style="padding: 40px 20px; max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; font-size: 28px; font-weight: bold; margin-bottom: 30px;">Insights</h2>
+        <div class="insights-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 20px;">
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: #fff;">
+                <img src="images/Insights.jpg" alt="Insight 1" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #000; font-weight: 600;">
+                        The Hidden Cost of Fragmentation: Solving Data Governance Challenges with Oracle Enterprise Data Management
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #222; color: #fff; border-radius: 25px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: #fff;">
+                <img src="images/Insights2.jpg" alt="Insight 2" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #000; font-weight: 600;">
+                        Guy Daniello: Helping Companies Digitally Transform with Cloud and AI Enabled Technology
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #222; color: #fff; border-radius: 25px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: #fff;">
+                <img src="images/Insights3.jpg" alt="Insight 3" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #000; font-weight: 600;">
+                        The Strategic CHRO: How Oracle Cloud HCM Enables Fearless Business Leadership
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #222; color: #fff; border-radius: 25px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: #fff;">
+                <img src="images/Insights4.jpg" alt="Insight 4" style="width: 50%; object-fit: cover;">
+                <div style="padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <p style="font-size: 16px; color: #000; font-weight: 600;">
+                        Transforming Tariff Uncertainty into Strategic Advantage
+                    </p>
+                    <button style="margin-top: 10px; padding: 8px 16px; border: none; background: #222; color: #fff; border-radius: 25px; cursor: pointer;">Read More »</button>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <button style="padding: 10px 24px; border: none; background: #222; color: #fff; border-radius: 25px; cursor: pointer;">Read More</button>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" style="background: linear-gradient(to right, #f0f9ff 0%, #e0f2fe 100%); padding: 80px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; text-align: center; margin-bottom: 20px; color: #1e3a8a;">Our Advisory Process</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 18px; color: #475569;">A structured approach to delivering measurable results and sustainable transformation.</p>
+            <div class="steps-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <div style="width: 80px; height: 80px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span style="font-size: 30px; font-weight: 700; color: #1d4ed8;">1</span>
+                    </div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; margin-bottom: 15px; color: #1e3a8a;">Discovery & Assessment</h3>
+                    <p style="color: #475569;">We begin by understanding your business, challenges, and goals through comprehensive analysis.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <div style="width: 80px; height: 80px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span style="font-size: 30px; font-weight: 700; color: #1d4ed8;">2</span>
+                    </div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; margin-bottom: 15px; color: #1e3a8a;">Strategy Development</h3>
+                    <p style="color: #475569;">We craft tailored strategies and roadmaps to address your specific needs and objectives.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <div style="width: 80px; height: 80px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span style="font-size: 30px; font-weight: 700; color: #1d4ed8;">3</span>
+                    </div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; margin-bottom: 15px; color: #1e3a8a;">Implementation Support</h3>
+                    <p style="color: #475569;">We provide guidance and support during execution to ensure successful implementation.</p>
+                </div>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <div style="width: 80px; height: 80px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <span style="font-size: 30px; font-weight: 700; color: #1d4ed8;">4</span>
+                    </div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; margin-bottom: 15px; color: #1e3a8a;">Measure & Optimize</h3>
+                    <p style="color: #475569;">We track performance, measure results, and refine strategies for continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisors Section -->
+    <section class="advisors-section" style="padding: 80px 20px; background: white;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; text-align: center; margin-bottom: 20px; color: #1e3a8a;">Our Expert Advisors</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 18px; color: #475569;">Meet our team of seasoned professionals with diverse industry expertise.</p>
+            <div class="advisors-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); text-align: center;">
+                    <div style="height: 300px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sarah Johnson" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 5px; color: #1e3a8a;">Sarah Johnson</h3>
+                        <p style="color: #3b82f6; margin-bottom: 15px; font-weight: 500;">Senior Strategy Advisor</p>
+                        <p style="color: #475569; margin-bottom: 20px;">15+ years of experience in business transformation and strategic planning.</p>
+                        <a href="#" style="display: inline-block; background: #3b82f6; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 500;">Connect</a>
+                    </div>
+                </div>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); text-align: center;">
+                    <div style="height: 300px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="David Chen" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 5px; color: #1e3a8a;">David Chen</h3>
+                        <p style="color: #10b981; margin-bottom: 15px; font-weight: 500;">Digital Transformation Lead</p>
+                        <p style="color: #475569; margin-bottom: 20px;">Expert in technology-driven business innovation and digital strategy.</p>
+                        <a href="#" style="display: inline-block; background: #10b981; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 500;">Connect</a>
+                    </div>
+                </div>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); text-align: center;">
+                    <div style="height: 300px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Amanda Rodriguez" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; margin-bottom: 5px; color: #1e3a8a;">Amanda Rodriguez</h3>
+                        <p style="color: #8b5cf6; margin-bottom: 15px; font-weight: 500;">Operations Excellence Specialist</p>
+                        <p style="color: #475569; margin-bottom: 20px;">Focused on process optimization and operational efficiency improvements.</p>
+                        <a href="#" style="display: inline-block; background: #8b5cf6; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 500;">Connect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" style="background: linear-gradient(to right, #fdf4ff 0%, #fae8ff 100%); padding: 80px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; text-align: center; margin-bottom: 20px; color: #1e3a8a;">Client Success Stories</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 18px; color: #475569;">Hear from organizations that have transformed their operations with our advisory services.</p>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); position: relative;">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Robert Smith" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-right: 15px;">
+                        <div>
+                            <h4 style="font-family: 'Poppins', sans-serif; margin: 0; color: #1e3a8a;">Robert Smith</h4>
+                            <p style="margin: 0; color: #64748b;">CEO, TechInnovate Inc.</p>
+                        </div>
+                    </div>
+                    <p style="color: #475569; font-style: italic; margin-bottom: 20px;">"The strategic advisory services completely transformed our approach to market expansion. We saw a 35% increase in operational efficiency within the first year."</p>
+                    <div style="color: #f59e0b;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); position: relative;">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Jennifer Lee" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-right: 15px;">
+                        <div>
+                            <h4 style="font-family: 'Poppins', sans-serif; margin: 0; color: #1e3a8a;">Jennifer Lee</h4>
+                            <p style="margin: 0; color: #64748b;">COO, Global Retail Group</p>
+                        </div>
+                    </div>
+                    <p style="color: #475569; font-style: italic; margin-bottom: 20px;">"The digital transformation roadmap provided by Consulting Solutions helped us streamline operations and reduce costs by 28% while improving customer satisfaction."</p>
+                    <div style="color: #f59e0b;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); position: relative;">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="David Wilson" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-right: 15px;">
+                        <div>
+                            <h4 style="font-family: 'Poppins', sans-serif; margin: 0; color: #1e3a8a;">David Wilson</h4>
+                            <p style="margin: 0; color: #64748b;">Finance Director, HealthFirst</p>
+                        </div>
+                    </div>
+                    <p style="color: #475569; font-style: italic; margin-bottom: 20px;">"The operational excellence program implemented by Consulting Solutions helped us reduce waste, improve productivity, and increase profitability by 22% in just 18 months."</p>
+                    <div style="color: #f59e0b;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); color: white; padding: 80px 20px; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; margin-bottom: 20px;">Ready to Transform Your Business?</h2>
+            <p style="font-size: 20px; margin-bottom: 40px;">Schedule a consultation with one of our expert advisors and start your journey to operational excellence today.</p>
+            <a href="#" style="display: inline-block; background: white; color: #1a73e8; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 18px; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">Request a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Additional Advisory Services Section -->
+    <section class="additional-advisory" style="padding: 80px 20px; background-color: #f9f9f9;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; margin-bottom: 20px;">
+                Advisory Services
+            </h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Unlock expert guidance to drive digital transformation, strategic innovation, and sustainable business growth.
+            </p>
+            <div class="additional-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+                <div style="flex: 1 1 300px; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left;">
+                    <div style="font-size: 40px; color: #1a73e8; margin-bottom: 15px;">📊</div>
+                    <h3 style="font-size: 20px; font-weight: 600; color: #333; margin-bottom: 10px;">Strategic Roadmapping</h3>
+                    <p style="font-size: 16px; color: #666;">
+                        Align IT investments with your business vision to create a clear path for digital and operational growth.
+                    </p>
+                </div>
+                <div style="flex: 1 1 300px; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left;">
+                    <div style="font-size: 40px; color: #1a73e8; margin-bottom: 15px;">☁</div>
+                    <h3 style="font-size: 20px; font-weight: 600; color: #333; margin-bottom: 10px;">Cloud Transformation</h3>
+                    <p style="font-size: 16px; color: #666;">
+                        Empower agility through multi-cloud and hybrid strategies built for performance, scale, and security.
+                    </p>
+                </div>
+                <div style="flex: 1 1 300px; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left;">
+                    <div style="font-size: 40px; color: #1a73e8; margin-bottom: 15px;">🔐</div>
+                    <h3 style="font-size: 20px; font-weight: 600; color: #333; margin-bottom: 10px;">Risk & Compliance</h3>
+                    <p style="font-size: 16px; color: #666;">
+                        Navigate complex regulations and safeguard your operations with expert-led compliance frameworks.
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: 50px;">
+                <a href="#contact" style="display: inline-block; background: #1a73e8; color: white; padding: 14px 30px; border-radius: 30px; font-weight: 600; font-size: 17px; text-decoration: none; transition: all 0.3s;">
+                    Talk to an Advisor »
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation to service cards
+            const serviceCards = document.querySelectorAll('[style*="box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08)"]');
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Industry Transformation | OpticBee Soft Tech</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS and Tailwind Config -->
+         <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slider .slide {
+            transition: opacity 1s ease-in-out;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Underline effect for nav items */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #f97316; /* orange-500 */
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-link:hover {
+            color: #f97316;
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(22, 53, 94, 0.95) 0%, rgba(26, 80, 148, 0.9) 100%);
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 md:text-4xl;
+        }
+        .section-subtitle {
+            @apply mt-4 text-lg text-gray-600 max-w-3xl mx-auto;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+        }
+        .cta-button {
+            @apply px-8 py-3 bg-teal-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-75 transition-all duration-300;
+        }
+        /* Animation class */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'optic-blue': '#16355E',
+                        'optic-teal': '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <!-- Header -->
+    <header class="bg-[#1e293b] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+           <!-- Logo -->
+            <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+                <img src="images/oblogo.png" 
+                    alt="Optic Bee Soft Tech" 
+                    style="height: 65px; width: auto; object-fit: contain; margin: -5px 0;">
+                <h2 style="font-size: 1.5rem; color: #FF7F27; font-weight: 600; margin: 0;">
+                Optic Bee
+                </h2>
+            </a>
+            </div>
+
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center space-x-8 text-gray-300">
+                <!-- About Us Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">About Us</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-56">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Story</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Culture</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Community Impact</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Partners</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Careers</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Awards</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                <!-- Regions Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Regions</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Services Multi-column Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Services</a>
+                    <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                        <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="advisoryServices.html" class="block text-gray-300 hover:text-orange-500">Advisory Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Consulting Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Managed Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Technical Shared Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Enterprise Change Management</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Anaplan</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">NetSuite</a></li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud CX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- Industries Multi-column Dropdown -->
+                 <li class="relative dropdown">
+                     <a href="#" class="nav-link font-medium">Industries</a>
+                     <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                         <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="retail.html" class="block text-gray-300 hover:text-orange-500">Retail & Manufacturing</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Professional Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Financial Services</a></li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Manufacturing</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">High Tech</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Life Sciences</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Construction & Engineering</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                </li>
+                <!-- Resources Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Resources</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Customer Success</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Insights</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Partner Portal</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right side of Navbar -->
+             <div class="hidden md:flex items-center space-x-4">
+                 <!-- Location Display (Replaces Language Selector) -->
+                <div id="location-display" class="flex items-center text-gray-300">
+                    <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                    <span id="location-text">Fetching location...</span>
+                </div>
+                 <!-- Search Bar -->
+                 <div class="relative">
+                     <input type="text" placeholder="Search..." class="bg-gray-700 text-white placeholder-gray-400 rounded-full py-1 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                     <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                        <i class="fas fa-search"></i>
+                     </button>
+                 </div>
+             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-[#1e293b] text-gray-300">
+            <ul class="flex flex-col space-y-3">
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Our Story</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Our Culture</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Community Impact</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Partners</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Careers</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Regions</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Advisory Services</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Consulting Services</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Managed Services</a></li>
+                         <li><a href="#" class="block text-gray-400 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Industries</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Retail</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Financial Services</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Manufacturing</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">High Tech</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Resources</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Customer Success</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Insights</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Partner Portal</a></li>
+                    </ul>
+                </li>
+                 <!-- Mobile Location Display -->
+                <li class="pt-3 mt-3 border-t border-gray-700">
+                    <div id="mobile-location-display" class="flex items-center text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                        <span id="mobile-location-text">Fetching location...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[600px] flex items-center justify-center text-white pt-20">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');"></div>
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="relative z-10 text-center px-6 fade-in-up">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">Reinventing Retail for the Digital Age.</h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-200">OpticBee Soft Tech empowers retailers to unify customer experiences, optimize operations, and drive profitable growth through innovative technology solutions.</p>
+                <a href="#solutions" class="mt-10 inline-block px-10 py-4 bg-optic-teal text-white font-bold rounded-lg shadow-xl hover:bg-teal-500 transform hover:scale-105 transition-all duration-300">Explore Our Solutions</a>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="solutions" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">End-to-End Retail Solutions</h2>
+                    <p class="section-subtitle">We connect strategy, experience, and technology to help you thrive in a competitive landscape. From storefront to supply chain, we have you covered.</p>
+                </div>
+
+                <div class="mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Solution Card 1 -->
+                    <div class="card fade-in-up">
+                        <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 text-optic-teal mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-optic-blue">Unified Commerce Experience</h3>
+                            <p class="mt-4 text-gray-600">Create seamless, personalized shopping journeys across all channels—online, mobile, and in-store—to boost customer loyalty and sales.</p>
+                        </div>
+                    </div>
+
+                    <!-- Solution Card 2 -->
+                    <div class="card fade-in-up" style="transition-delay: 100ms;">
+                        <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 text-optic-teal mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.657 7.343A8 8 0 0117.657 18.657z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1014.12 11.88a3 3 0 00-4.242 4.242z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-optic-blue">Data & AI-Driven Insights</h3>
+                            <p class="mt-4 text-gray-600">Leverage the power of your data. We implement advanced analytics and AI to forecast demand, personalize marketing, and make smarter decisions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Solution Card 3 -->
+                    <div class="card fade-in-up" style="transition-delay: 200ms;">
+                        <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 text-optic-teal mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h8a1 1 0 001-1zM3 11h10" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-optic-blue">Intelligent Supply Chain</h3>
+                            <p class="mt-4 text-gray-600">Build a resilient and agile supply chain. We optimize inventory management, order fulfillment, and logistics to reduce costs and improve speed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Us Section -->
+        <section id="why-us" class="py-20 md:py-28 bg-gray-50">
+            <div class="container mx-auto px-6">
+                 <div class="text-center">
+                    <h2 class="section-title">Your Strategic Partner in Growth</h2>
+                    <p class="section-subtitle">We don't just build solutions; we build relationships. Our approach is founded on deep industry knowledge, technical excellence, and a commitment to your success.</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
+                    <div class="fade-in-up">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto rounded-full bg-white shadow-lg text-optic-blue mb-6">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-optic-blue">Retail-First Expertise</h3>
+                        <p class="mt-3 text-gray-600">Our team is composed of retail industry veterans and tech experts who understand your unique challenges and opportunities.</p>
+                    </div>
+                     <div class="fade-in-up" style="transition-delay: 150ms;">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto rounded-full bg-white shadow-lg text-optic-blue mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-optic-blue">Proven Methodologies</h3>
+                        <p class="mt-3 text-gray-600">We leverage agile frameworks and best-in-class technologies to deliver high-quality solutions on time and on budget.</p>
+                    </div>
+                     <div class="fade-in-up" style="transition-delay: 300ms;">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto rounded-full bg-white shadow-lg text-optic-blue mb-6">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-optic-blue">Future-Focused Innovation</h3>
+                        <p class="mt-3 text-gray-600">We keep you ahead of the curve, exploring emerging technologies like composable commerce, AI, and IoT to drive your next wave of growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EPM Services Section -->
+        <section id="epm-services" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">Elevate Strategy with Enterprise Performance Management</h2>
+                    <p class="section-subtitle">Our EPM solutions for retail integrate financial and operational planning, providing a single source of truth to drive performance, agility, and growth.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- EPM Card 1 -->
+                    <div class="card fade-in-up">
+                        <div class="p-8">
+                             <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 text-optic-teal mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 0v6m0-6l-6 6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-optic-blue">Integrated Financial Planning</h3>
+                            <p class="mt-4 text-gray-600">Connect your budgeting, forecasting, and reporting processes. Model scenarios in real-time to understand the financial impact of every decision.</p>
+                        </div>
+                    </div>
+                    <!-- EPM Card 2 -->
+                    <div class="card fade-in-up" style="transition-delay: 150ms;">
+                        <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 text-optic-teal mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-optic-blue">Merchandise & Assortment Planning</h3>
+                            <p class="mt-4 text-gray-600">Optimize your product mix and inventory levels across all stores and channels to maximize sales and margin while minimizing markdowns.</p>
+                        </div>
+                    </div>
+                    <!-- EPM Card 3 -->
+                    <div class="card fade-in-up" style="transition-delay: 300ms;">
+                         <div class="p-8">
+                            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 text-optic-teal mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.122-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.122-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-optic-blue">Workforce & Store Planning</h3>
+                            <p class="mt-4 text-gray-600">Align staffing schedules and store-level targets with sales forecasts and foot traffic to ensure operational excellence and control labor costs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Insights Section -->
+        <section id="insights" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">Latest Retail Insights</h2>
+                    <p class="section-subtitle">Stay informed with our latest articles, research, and perspectives on the evolving world of retail technology and strategy.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Insight Card 1 -->
+                    <div class="card fade-in-up">
+                        <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Blog post image">
+                        <div class="p-6">
+                            <p class="text-sm text-optic-teal font-semibold">Article</p>
+                            <h3 class="mt-2 text-lg font-bold text-optic-blue hover:underline cursor-pointer">The Future is Phygital: Blending Digital and Physical Retail</h3>
+                            <p class="mt-3 text-sm text-gray-600">Discover how leading retailers are merging their physical and digital operations to create compelling new customer experiences.</p>
+                        </div>
+                    </div>
+                    <!-- Insight Card 2 -->
+                    <div class="card fade-in-up" style="transition-delay: 150ms;">
+                        <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Blog post image">
+                        <div class="p-6">
+                            <p class="text-sm text-optic-teal font-semibold">Whitepaper</p>
+                            <h3 class="mt-2 text-lg font-bold text-optic-blue hover:underline cursor-pointer">AI in Retail: 5 Use Cases for Driving ROI</h3>
+                            <p class="mt-3 text-sm text-gray-600">Download our in-depth guide to implementing AI for personalization, demand forecasting, and operational efficiency.</p>
+                        </div>
+                    </div>
+                    <!-- Insight Card 3 -->
+                    <div class="card fade-in-up" style="transition-delay: 300ms;">
+                        <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1600880292203-942bb68b3be3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Blog post image">
+                        <div class="p-6">
+                            <p class="text-sm text-optic-teal font-semibold">Case Study</p>
+                            <h3 class="mt-2 text-lg font-bold text-optic-blue hover:underline cursor-pointer">How We Reduced Stockouts by 30% for a Global CPG Brand</h3>
+                            <p class="mt-3 text-sm text-gray-600">Learn how our supply chain optimization solution helped a major brand improve inventory accuracy and customer satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">About Us</h3>
+                    <p class="text-gray-400">Optic Bee Soft Tech provides innovative IT solutions and services to businesses worldwide, helping them achieve their goals.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Hyperion EPM</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">BI & Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Data Warehousing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Contact Info</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94301</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-orange-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-orange-500"></i>
+                            <span>info@opticbee.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2024 Optic Bee Soft Tech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Hero Slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = '0';
+                dots[index].classList.remove('bg-white');
+                dots[index].classList.add('bg-opacity-50');
+            });
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].style.opacity = '1';
+            dots[currentSlide].classList.add('bg-white');
+            dots[currentSlide].classList.remove('bg-opacity-50');
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto slide
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        showSlide(0); // Initialize first slide
+
+        // --- Geolocation and Location Display ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const locationText = document.getElementById('location-text');
+            const mobileLocationText = document.getElementById('mobile-location-text');
+            const apiKey = 'AIzaSyDqW6tsp_sUG5-Xf6aXFzYuqrvRiGehGXg'; // Your provided API key
+
+            // Helper function to update text on both desktop and mobile views
+            const updateLocationText = (message) => {
+                locationText.textContent = message;
+                if (mobileLocationText) {
+                    mobileLocationText.textContent = message;
+                }
+            };
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`;
+
+                        fetch(geocodeUrl)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                if (data.status === 'OK' && data.results[0]) {
+                                    const addressComponents = data.results[0].address_components;
+                                    let city = '';
+                                    let country = '';
+
+                                    for (const component of addressComponents) {
+                                        if (component.types.includes('locality')) {
+                                            city = component.long_name;
+                                        }
+                                        if (component.types.includes('country')) {
+                                            country = component.long_name;
+                                        }
+                                    }
+                                    
+                                    const locationString = city && country ? `${city}, ${country}` : 'Location Found';
+                                    updateLocationText(locationString);
+
+                                } else {
+                                    updateLocationText('Location Not Found');
+                                    console.error('Geocoding API Error:', data.status, data.error_message);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching geocode data:', error);
+                                updateLocationText('Could Not Fetch Location');
+                            });
+                    },
+                    (error) => {
+                        console.error(`Geolocation error: ${error.message}`);
+                        let errorMessage;
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMessage = 'Location Access Denied';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMessage = 'Location Unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                errorMessage = 'Request Timed Out';
+                                break;
+                            default:
+                                errorMessage = 'Location Error';
+                                break;
+                        }
+                        updateLocationText(errorMessage);
+                    }
+                );
+            } else {
+                updateLocationText("Geolocation Not Supported");
+            }
+
+            // --- NEW --- Mobile Menu Dropdown Toggle --- NEW ---
+            const mobileDropdownToggles = document.querySelectorAll('#mobile-menu .mobile-menu-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent link from navigating anywhere
+                    const submenu = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i.fa-chevron-down');
+                    
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                        submenu.classList.toggle('hidden');
+                        if(icon) {
+                            icon.classList.toggle('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Shrink header on scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2');
+                    header.classList.remove('py-4');
+                } else {
+                    header.classList.add('py-4');
+                    header.classList.remove('py-2');
+                }
+            });
+
+            // Intersection Observer for animations
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
+

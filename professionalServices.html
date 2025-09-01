@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Services | Optic Bee Soft Tech</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Simple animation for cards on hover */
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">
+                Optic Bee Soft Tech
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#services" class="text-blue-600 font-semibold border-b-2 border-blue-600">Services</a>
+                <a href="#epm" class="text-gray-600 hover:text-blue-600">EPM Solutions</a>
+                <a href="#why-us" class="text-gray-600 hover:text-blue-600">Why Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                Get in Touch
+            </a>
+            <!-- Mobile Menu Button (optional, for future expansion) -->
+            <div class="md:hidden">
+                <button class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <div class="absolute inset-0 bg-blue-500 opacity-10 skew-y-[-3deg]"></div>
+                <div class="relative z-10">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                        Driving Business Transformation Through Expert Services
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                        At Optic Bee Soft Tech, we deliver strategic consulting and technology solutions that accelerate growth, optimize performance, and create lasting value.
+                    </p>
+                    <a href="#services" class="cta-button inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-700 transition-transform">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Professional Services</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">We provide a comprehensive suite of services to meet your most critical business needs.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- EPM Service Card -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300">
+                        <div class="bg-blue-100 text-blue-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <!-- Icon: Trending Up -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Enterprise Performance Management (EPM)</h3>
+                        <p class="text-gray-600">Streamline your financial planning, budgeting, forecasting, and consolidation processes for smarter, data-driven decisions.</p>
+                    </div>
+
+                    <!-- BI & Analytics Card -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300">
+                        <div class="bg-green-100 text-green-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                             <!-- Icon: Chart Bar -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">BI & Advanced Analytics</h3>
+                        <p class="text-gray-600">Unlock insights from your data. We help you implement powerful analytics platforms and create intuitive dashboards.</p>
+                    </div>
+
+                    <!-- Cloud Services Card -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300">
+                        <div class="bg-purple-100 text-purple-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <!-- Icon: Cloud -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Cloud Solutions</h3>
+                        <p class="text-gray-600">Leverage the power of the cloud with our expert migration, infrastructure management, and optimization services.</p>
+                    </div>
+
+                    <!-- Digital Transformation Card -->
+                     <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300">
+                        <div class="bg-yellow-100 text-yellow-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                             <!-- Icon: Sparkles -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.293 2.293a1 1 0 010 1.414L10 17l-4 4-4-4 9.293-9.293a1 1 0 011.414 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Digital Transformation</h3>
+                        <p class="text-gray-600">Modernize your legacy systems, automate workflows, and adopt agile practices to stay ahead of the curve.</p>
+                    </div>
+
+                    <!-- App Development Card -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300">
+                        <div class="bg-red-100 text-red-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <!-- Icon: Code -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Custom Application Development</h3>
+                        <p class="text-gray-600">From concept to launch, we build scalable, secure, and user-friendly web and mobile applications tailored to your needs.</p>
+                    </div>
+
+                    <!-- Managed Services Card -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-all duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                            <!-- Icon: Support -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Managed IT Services</h3>
+                        <p class="text-gray-600">Focus on your core business while we handle the day-to-day management of your IT infrastructure and applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured EPM Section -->
+        <section id="epm" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <span class="text-blue-600 font-semibold">NEWLY LAUNCHED</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Elevate Your Strategy with Enterprise Performance Management</h2>
+                        <p class="text-gray-600 mb-4 text-lg">
+                            We are excited to announce our new EPM services. Optic Bee Soft Tech now provides end-to-end solutions to unify your financial data, automate critical processes, and empower your teams with predictive insights for superior performance.
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Integrated Planning:</strong> Connect financial and operational plans across the enterprise.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Accelerated Financial Close:</strong> Automate consolidation and close your books faster and with more accuracy.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Intelligent Forecasting:</strong> Utilize predictive analytics and AI to generate more reliable forecasts.</span>
+                            </li>
+                        </ul>
+                         <a href="#contact" class="cta-button inline-block mt-8 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform">
+                            Learn About EPM
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/E0F2FE/0284C7?text=Financial+Dashboard" alt="EPM Dashboard showing charts and graphs" class="rounded-xl shadow-2xl w-full">
+                        <!-- A placeholder image is used here. You can replace the src with a real image of a dashboard. -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">The Optic Bee Advantage</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">We are more than just a vendor; we are your dedicated technology partner.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Client-Centric Approach</h3>
+                        <p class="text-gray-600">Your success is our primary metric. We invest time to understand your unique challenges and goals to deliver tailored solutions.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Deep Expertise</h3>
+                        <p class="text-gray-600">Our team consists of certified professionals and industry veterans with a proven track record of successful project delivery.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Technology Partnerships</h3>
+                        <p class="text-gray-600">We maintain strong partnerships with leading technology providers like Oracle, Microsoft, and AWS to bring you the best solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact / CTA Section -->
+        <section id="contact" class="bg-blue-600 text-white">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Elevate Your Business?</h2>
+                <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                    Let's discuss how Optic Bee Soft Tech can help you achieve your goals. Contact us for a no-obligation consultation.
+                </p>
+                <a href="mailto:contact@opticbeesoft.tech" class="cta-button inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform">
+                    Contact Us Today
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-center md:text-left">&copy; 2024 Optic Bee Soft Tech. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
