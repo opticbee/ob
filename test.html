@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Developments</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS for Animations, Gradients, and Advanced Styling -->
+    <style>
+        /* Applying Poppins font to the entire page */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc; /* A light gray background for the body */
+            color: #1e293b; /* Slate-800 for text */
+        }
+
+        /* --- Hero Section Text Animation --- */
+        .animated-heading {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            animation: gradient-flow 8s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .reveal-text span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px) scale(0.9);
+            animation: reveal-char 1s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes reveal-char {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* --- Scroll-based Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered animation delays */
+        .reveal.visible:nth-child(2) { transition-delay: 0.1s; }
+        .reveal.visible:nth-child(3) { transition-delay: 0.2s; }
+        .reveal.visible:nth-child(4) { transition-delay: 0.3s; }
+
+        /* --- Section-Specific Styles --- */
+        .section-gradient-1 {
+            background-image: linear-gradient(to top right, #f3e8ff, #e0f2fe);
+        }
+        
+        .section-gradient-2 {
+            background-image: linear-gradient(to bottom left, #fff7ed, #e0e7ff);
+        }
+
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover-effect:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+        }
+
+        /* --- Statistics Counter --- */
+        .counter-value {
+            font-weight: 700;
+            color: #4f46e5; /* Indigo-600 */
+        }
+
+        /* --- Timeline Styles --- */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #d1d5db; /* Gray-300 */
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-container.left {
+            left: 0;
+        }
+
+        .timeline-container.right {
+            left: 50%;
+        }
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #6366f1; /* Indigo-500 */
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.4s ease;
+        }
+        
+        .timeline-container:hover .timeline-content {
+            transform: scale(1.03);
+        }
+
+        /* Responsive timeline */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-container.left, .timeline-container.right {
+                left: 0%;
+            }
+
+            .timeline-container::after {
+                left: 15px;
+            }
+        }
+        
+        /* --- Testimonial Slider --- */
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .testimonial-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* --- FAQ Accordion --- */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px; /* Adjust as needed */
+            transition: max-height 0.5s ease-in;
+        }
+        .accordion-item .icon-plus { display: block; }
+        .accordion-item .icon-minus { display: none; }
+        .accordion-item.active .icon-plus { display: none; }
+        .accordion-item.active .icon-minus { display: block; }
+        .accordion-item.active .accordion-title { color: #4f46e5; }
+        
+        /* Custom progress bar */
+        .progress-bar-container {
+            height: 12px;
+            background-color: #e5e7eb;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #4ade80; /* Green-400 */
+            width: 0;
+            border-radius: 6px;
+            transition: width 1.5s ease-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main Content Wrapper -->
+    <main class="overflow-x-hidden">
+
+        <!-- ====================================================== -->
+        <!-- HERO SECTION -->
+        <!-- ====================================================== -->
+        <section id="hero" class="relative min-h-[80vh] md:min-h-screen flex items-center justify-center section-gradient-1 overflow-hidden">
+            <div class="absolute inset-0 bg-grid-slate-200 [mask-image:linear-gradient(to_bottom,white_0%,rgba(255,255,255,0)_100%)]"></div>
+            <div class="container mx-auto px-6 py-24 text-center relative z-10">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 reveal-text">
+                    <!-- Text will be populated by JS for animation -->
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-600 mb-10 reveal" style="transition-delay: 0.5s;">
+                    From innovative concepts to powerful digital solutions, we build platforms that drive growth and transform industries. Explore the portfolio of our proudest achievements.
+                </p>
+                <div class="reveal" style="transition-delay: 0.8s;">
+                    <a href="#healthcare" class="bg-indigo-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-indigo-700 transition-transform transform hover:scale-105">
+                        Explore Our Work
+                    </a>
+                </div>
+            </div>
+            <!-- Decorative shapes -->
+            <div class="absolute top-10 -left-20 w-48 h-48 bg-purple-200 rounded-full opacity-50 filter blur-2xl animate-blob"></div>
+            <div class="absolute bottom-10 -right-20 w-64 h-64 bg-blue-200 rounded-full opacity-50 filter blur-2xl animate-blob animation-delay-4000"></div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- HEALTHCARE SECTION -->
+        <!-- ====================================================== -->
+        <section id="healthcare" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4 reveal">Healthcare Services</h2>
+                    <p class="text-lg text-slate-500 reveal">Pioneering digital health solutions to improve patient care, streamline operations, and enhance accessibility to medical services.</p>
+                </div>
+
+                <!-- Grid of Healthcare Projects -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: Hitaishi Healthcare -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-100 card-hover-effect reveal">
+                        <div class="flex items-center mb-5">
+                            <img src="https://placehold.co/50x50/3b82f6/ffffff?text=HH" alt="Hitaishi Healthcare Logo" class="rounded-lg mr-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Hitaishi Healthcare</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6">A comprehensive platform for hospital management, patient records, and telemedicine consultations, connecting doctors and patients seamlessly.</p>
+                        <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">View Project &rarr;</a>
+                    </div>
+                    
+                    <!-- Card 2: Hitaishi Health -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-100 card-hover-effect reveal">
+                         <div class="flex items-center mb-5">
+                            <img src="https://placehold.co/50x50/10b981/ffffff?text=H+" alt="Hitaishi Health Logo" class="rounded-lg mr-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Hitaishi Health</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6">An AI-powered wellness app offering personalized fitness plans, nutrition tracking, and mental health support for a holistic lifestyle.</p>
+                        <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">Learn More &rarr;</a>
+                    </div>
+                    
+                    <!-- Card 3: PharmaConnect -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-100 card-hover-effect reveal">
+                        <div class="flex items-center mb-5">
+                            <img src="https://placehold.co/50x50/8b5cf6/ffffff?text=PC" alt="PharmaConnect Logo" class="rounded-lg mr-4">
+                            <h3 class="text-2xl font-bold text-slate-900">PharmaConnect</h3>
+                        </div>
+                        <p class="text-slate-600 mb-6">An e-pharmacy solution that simplifies medicine procurement, prescription management, and offers automated refill reminders.</p>
+                        <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">Discover Platform &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- STATISTICS SECTION -->
+        <!-- ====================================================== -->
+        <section id="statistics" class="py-20 md:py-24 section-gradient-2">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <!-- Stat 1 -->
+                    <div class="reveal">
+                        <h3 class="text-5xl md:text-6xl font-extrabold mb-2 counter-value" data-target="75">0</h3>
+                        <p class="text-lg text-slate-600 font-medium">Projects Completed</p>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="reveal">
+                        <h3 class="text-5xl md:text-6xl font-extrabold mb-2 counter-value" data-target="150">0</h3>
+                        <p class="text-lg text-slate-600 font-medium">Happy Clients</p>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="reveal">
+                        <h3 class="text-5xl md:text-6xl font-extrabold mb-2 counter-value" data-target="500000">0</h3>
+                        <p class="text-lg text-slate-600 font-medium">Lines of Code</p>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="reveal">
+                        <h3 class="text-5xl md:text-6xl font-extrabold mb-2 counter-value" data-target="12">0</h3>
+                        <p class="text-lg text-slate-600 font-medium">Awards Won</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- E-COMMERCE SECTION -->
+        <!-- ====================================================== -->
+        <section id="ecommerce" class="py-20 md:py-28 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4 reveal">E-Commerce Revolution</h2>
+                    <p class="text-lg text-slate-500 reveal">Crafting seamless online shopping experiences with robust backends, intuitive user interfaces, and scalable architectures for businesses of all sizes.</p>
+                </div>
+                
+                <!-- E-commerce Projects -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Project Showcase Image -->
+                    <div class="reveal">
+                        <img src="https://placehold.co/600x450/ec4899/ffffff?text=E-Commerce+Suite" alt="E-commerce project mockup" class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    
+                    <!-- Project Cards -->
+                    <div class="flex flex-col gap-8">
+                        <!-- Card 1: Gadicart -->
+                        <div class="bg-white p-6 rounded-lg shadow-md flex items-start gap-5 card-hover-effect reveal">
+                            <img src="https://placehold.co/40x40/f97316/ffffff?text=GC" class="rounded-md mt-1" alt="Gadicart Logo">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800">Gadicart</h4>
+                                <p class="text-slate-600">A multi-vendor marketplace platform with advanced search, secure payments, and seller management tools.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2: 99Metros -->
+                        <div class="bg-white p-6 rounded-lg shadow-md flex items-start gap-5 card-hover-effect reveal">
+                           <img src="https://placehold.co/40x40/22c55e/ffffff?text=99M" class="rounded-md mt-1" alt="99Metros Logo">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800">99Metros</h4>
+                                <p class="text-slate-600">Hyperlocal delivery service for groceries and daily essentials, optimized for fast and reliable order fulfillment.</p>
+                            </div>
+                        </div>
+                        <!-- Card 3: Rythubazzar -->
+                        <div class="bg-white p-6 rounded-lg shadow-md flex items-start gap-5 card-hover-effect reveal">
+                           <img src="https://placehold.co/40x40/0ea5e9/ffffff?text=RB" class="rounded-md mt-1" alt="Rythubazzar Logo">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-800">Rythubazzar</h4>
+                                <p class="text-slate-600">A farm-to-table platform connecting local farmers directly with consumers, ensuring fresh produce and fair prices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- FINANCIALS & JOBS SECTION -->
+        <!-- ====================================================== -->
+        <section id="finance-jobs" class="py-20 md:py-28 section-gradient-1">
+            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Financials Column -->
+                <div class="reveal">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-8">Financials & Fintech</h2>
+                    <div class="space-y-6">
+                        <!-- Hitaishi Financials Card -->
+                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-lg flex items-center gap-5 card-hover-effect">
+                            <img src="https://placehold.co/60x60/d97706/ffffff?text=HF" class="rounded-lg" alt="Hitaishi Financials Logo">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">Hitaishi Financials</h3>
+                                <p class="text-slate-600">A secure digital banking and investment platform offering portfolio management, financial planning tools, and real-time market data.</p>
+                            </div>
+                        </div>
+                        <!-- Progress Bar Feature -->
+                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-lg card-hover-effect">
+                            <h4 class="font-bold text-lg mb-2">Platform Security Score</h4>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" data-width="95%" style="background-color: #f59e0b;"></div>
+                            </div>
+                            <p class="text-sm text-slate-500 mt-2">End-to-end encryption and compliance with global financial security standards.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jobs Column -->
+                <div class="reveal">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-8">Job & Career Platforms</h2>
+                    <div class="space-y-6">
+                        <!-- Get Jobs Card -->
+                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-lg card-hover-effect">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Get Jobs & Winjob</h3>
+                            <p class="text-slate-600 mb-4">Dual platforms connecting job seekers with employers. Features AI-driven resume matching, skill assessments, and an integrated applicant tracking system.</p>
+                            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-800">Explore Career Solutions &rarr;</a>
+                        </div>
+                         <!-- HitaishiPay Card -->
+                        <div class="bg-white/70 backdrop-blur-sm p-6 rounded-lg shadow-lg card-hover-effect">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">HitaishiPay</h3>
+                            <p class="text-slate-600">A streamlined payroll and freelance payment management system, ensuring timely and transparent compensation for a global workforce.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- TIMELINE SECTION -->
+        <!-- ====================================================== -->
+        <section id="timeline" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4 reveal">Our Development Journey</h2>
+                    <p class="text-lg text-slate-500 reveal">Tracing our path from a visionary idea to a portfolio of impactful digital products that redefine industries.</p>
+                </div>
+                
+                <!-- Timeline Structure -->
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-container left reveal">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold mb-1">2018: The Genesis</h3>
+                            <p class="text-slate-600">Our journey began with the launch of Hitaishi Financials, aiming to democratize investment tools for everyone.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="timeline-container right reveal">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold mb-1">2019: Entering E-Commerce</h3>
+                            <p class="text-slate-600">We launched Gadicart, our first multi-vendor marketplace, empowering small businesses to sell online.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="timeline-container left reveal">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold mb-1">2020: Focus on Health</h3>
+                            <p class="text-slate-600">Hitaishi Healthcare was developed to digitize hospital operations and improve patient outcomes during a critical time.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="timeline-container right reveal">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold mb-1">2021: Connecting People</h3>
+                            <p class="text-slate-600">Launched Winjob to tackle unemployment challenges and introduced 4Jodi, a modern matrimony platform.</p>
+                        </div>
+                    </div>
+                     <!-- Item 5 -->
+                    <div class="timeline-container left reveal">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold mb-1">2022: Expanding Mobility</h3>
+                            <p class="text-slate-600">GoRiders hit the streets, offering a smart, safe, and efficient urban transportation solution.</p>
+                        </div>
+                    </div>
+                     <!-- Item 6 -->
+                    <div class="timeline-container right reveal">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold mb-1">2023: The Future is Now</h3>
+                            <p class="text-slate-600">Innovating with AI in all our platforms and launching our first major Sports engagement app.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- DIVERSE SECTORS (SPORTS, RIDE, MATRIMONY) -->
+        <!-- ====================================================== -->
+        <section id="diverse-sectors" class="py-20 md:py-28 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4 reveal">Ventures in Every Lifestyle Niche</h2>
+                    <p class="text-lg text-slate-500 reveal">Beyond the essentials, we build platforms that connect passions, people, and purposes.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Sports Card -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-100 card-hover-effect flex flex-col items-center text-center reveal">
+                        <div class="bg-red-100 p-4 rounded-full mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Sports Engagement</h3>
+                        <p class="text-slate-600 mb-6">A dynamic platform for sports enthusiasts to follow live scores, join fan communities, and participate in fantasy leagues.</p>
+                        <button class="mt-auto bg-red-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-red-600 transition-colors">Join the Game</button>
+                    </div>
+
+                    <!-- Ride Card -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-100 card-hover-effect flex flex-col items-center text-center reveal">
+                        <div class="bg-blue-100 p-4 rounded-full mb-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">GoRiders</h3>
+                        <p class="text-slate-600 mb-6">An intelligent ride-sharing app connecting drivers and passengers with a focus on safety, affordability, and real-time tracking.</p>
+                        <button class="mt-auto bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">Book a Ride</button>
+                    </div>
+
+                    <!-- Matrimony Card -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-100 card-hover-effect flex flex-col items-center text-center reveal">
+                        <div class="bg-pink-100 p-4 rounded-full mb-5">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">4Jodi</h3>
+                        <p class="text-slate-600 mb-6">A trusted matrimony service that uses advanced compatibility algorithms and verified profiles to help people find their life partners.</p>
+                        <button class="mt-auto bg-pink-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-pink-600 transition-colors">Find Your Match</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- TESTIMONIALS SECTION -->
+        <!-- ====================================================== -->
+        <section id="testimonials" class="py-20 md:py-28 section-gradient-2">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4 reveal">Success Stories</h2>
+                    <p class="text-lg text-slate-500 reveal">Hear from the clients and users who have experienced the transformative power of our digital solutions firsthand.</p>
+                </div>
+                
+                <!-- Testimonial Slider -->
+                <div class="testimonial-slider max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-8 md:p-12 reveal">
+                    <div class="testimonial-track">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide text-center px-4">
+                            <img src="https://i.pravatar.cc/100?img=11" alt="Client Photo" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-indigo-200">
+                            <p class="text-xl italic text-slate-700 mb-6">"Working with this team was a game-changer. Their platform for Hitaishi Healthcare streamlined our entire workflow, reducing patient wait times by 40%. The impact was immediate and profound."</p>
+                            <h4 class="font-bold text-lg text-slate-900">Dr. Anjali Sharma</h4>
+                            <p class="text-slate-500">Chief Medical Officer, Apollo Clinic</p>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide text-center px-4">
+                            <img src="https://i.pravatar.cc/100?img=45" alt="Client Photo" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-indigo-200">
+                            <p class="text-xl italic text-slate-700 mb-6">"The Gadicart platform allowed our small business to compete with retail giants. The setup was seamless, and our online sales have tripled in just six months. Incredible support and technology."</p>
+                            <h4 class="font-bold text-lg text-slate-900">Rohan Mehta</h4>
+                            <p class="text-slate-500">Owner, The Artisan Corner</p>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide text-center px-4">
+                            <img src="https://i.pravatar.cc/100?img=32" alt="Client Photo" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-indigo-200">
+                            <p class="text-xl italic text-slate-700 mb-6">"As a daily commuter, GoRiders has been a lifesaver. It's reliable, the drivers are professional, and the app is so easy to use. I feel safer and save money every day."</p>
+                            <h4 class="font-bold text-lg text-slate-900">Priya Singh</h4>
+                            <p class="text-slate-500">Daily Commuter & App User</p>
+                        </div>
+                    </div>
+                    <!-- Slider Controls -->
+                    <div class="flex justify-center mt-8 gap-4">
+                        <button id="prev-slide" class="bg-indigo-500 text-white rounded-full h-12 w-12 flex items-center justify-center shadow-lg hover:bg-indigo-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                        </button>
+                        <button id="next-slide" class="bg-indigo-500 text-white rounded-full h-12 w-12 flex items-center justify-center shadow-lg hover:bg-indigo-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- FAQ SECTION -->
+        <!-- ====================================================== -->
+        <section id="faq" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4 reveal">Frequently Asked Questions</h2>
+                    <p class="text-lg text-slate-500 reveal">Have questions? We have answers. Find out more about our development process, technology, and services.</p>
+                </div>
+                
+                <!-- Accordion Container -->
+                <div class="max-w-4xl mx-auto space-y-4 reveal">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="accordion-toggle w-full text-left p-6 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span class="accordion-title font-semibold text-lg text-slate-800">What technologies do you specialize in?</span>
+                            <span class="text-indigo-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-plus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-minus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-6 pt-0 text-slate-600">We have a diverse tech stack, but our core expertise lies in modern frameworks like React, Vue.js, and Node.js for web applications, Swift and Kotlin for mobile apps, and Python for AI/ML integrations. We always choose the best technology for the project's specific needs.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="accordion-toggle w-full text-left p-6 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span class="accordion-title font-semibold text-lg text-slate-800">How long does a typical project take?</span>
+                            <span class="text-indigo-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-plus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-minus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-6 pt-0 text-slate-600">Project timelines vary greatly depending on complexity and scope. A simple MVP might take 3-4 months, while a large-scale enterprise platform could take over a year. We follow an agile methodology, delivering value in iterative sprints, which provides transparency and flexibility throughout the process.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="accordion-toggle w-full text-left p-6 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span class="accordion-title font-semibold text-lg text-slate-800">Do you provide post-launch support and maintenance?</span>
+                            <span class="text-indigo-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-plus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-minus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-6 pt-0 text-slate-600">Absolutely. We believe in building long-term partnerships. We offer various support and maintenance packages to ensure your application remains secure, up-to-date, and performs optimally as your business grows. This includes bug fixes, feature enhancements, and server monitoring.</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="accordion-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="accordion-toggle w-full text-left p-6 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                            <span class="accordion-title font-semibold text-lg text-slate-800">Can you build a custom solution for my unique business idea?</span>
+                            <span class="text-indigo-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-plus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon-minus" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" /></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="p-6 pt-0 text-slate-600">Yes, custom solutions are our specialty! We thrive on turning unique ideas into reality. Our process starts with a deep discovery phase to understand your vision, target audience, and business goals. From there, we design and develop a tailor-made product that sets you apart from the competition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Inline JavaScript for Interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ======================================================
+            // HERO TEXT ANIMATION
+            // ======================================================
+            const heroHeading = document.querySelector('.reveal-text');
+            if (heroHeading) {
+                const text = "Our Developments";
+                heroHeading.innerHTML = text.split('').map((char, index) => 
+                    `<span style="animation-delay: ${index * 0.05}s">${char === ' ' ? '&nbsp;' : char}</span>`
+                ).join('');
+            }
+            
+
+            // ======================================================
+            // REVEAL ON SCROLL
+            // ======================================================
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+
+            // ======================================================
+            // STATISTICS COUNTER ANIMATION
+            // ======================================================
+            const counters = document.querySelectorAll('.counter-value');
+            const speed = 200; // The lower the #, the faster the count
+
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const increment = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + increment);
+                                setTimeout(updateCount, 10);
+                            } else {
+                                counter.innerText = target.toLocaleString(); // Add commas for larger numbers
+                            }
+                        };
+                        
+                        updateCount();
+                        observer.unobserve(counter); // Stop observing after animation
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => counterObserver.observe(counter));
+
+
+            // ======================================================
+            // PROGRESS BAR ANIMATION
+            // ======================================================
+            const progressBars = document.querySelectorAll('.progress-bar');
+            const progressObserver = new IntersectionObserver((entries, observer) => {
+                 entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const width = bar.getAttribute('data-width');
+                        bar.style.width = width;
+                        observer.unobserve(bar);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            progressBars.forEach(bar => progressObserver.observe(bar));
+
+            // ======================================================
+            // TESTIMONIAL SLIDER
+            // ======================================================
+            const track = document.querySelector('.testimonial-track');
+            if (track) {
+                const slides = Array.from(track.children);
+                const nextButton = document.getElementById('next-slide');
+                const prevButton = document.getElementById('prev-slide');
+                const slideWidth = slides[0].getBoundingClientRect().width;
+
+                let currentIndex = 0;
+
+                const moveToSlide = (targetIndex) => {
+                    track.style.transform = `translateX(-${slideWidth * targetIndex}px)`;
+                    currentIndex = targetIndex;
+                };
+                
+                // Autoplay
+                let autoplayInterval = setInterval(() => {
+                    let nextIndex = currentIndex + 1;
+                    if (nextIndex >= slides.length) {
+                        nextIndex = 0;
+                    }
+                    moveToSlide(nextIndex);
+                }, 5000);
+
+                const resetAutoplay = () => {
+                    clearInterval(autoplayInterval);
+                    autoplayInterval = setInterval(() => {
+                         let nextIndex = currentIndex + 1;
+                         if (nextIndex >= slides.length) {
+                             nextIndex = 0;
+                         }
+                         moveToSlide(nextIndex);
+                    }, 5000);
+                };
+
+                nextButton.addEventListener('click', () => {
+                    let nextIndex = currentIndex + 1;
+                    if (nextIndex >= slides.length) {
+                        nextIndex = 0;
+                    }
+                    moveToSlide(nextIndex);
+                    resetAutoplay();
+                });
+
+                prevButton.addEventListener('click', () => {
+                    let prevIndex = currentIndex - 1;
+                    if (prevIndex < 0) {
+                        prevIndex = slides.length - 1;
+                    }
+                    moveToSlide(prevIndex);
+                    resetAutoplay();
+                });
+                
+                // Adjust on resize
+                window.addEventListener('resize', () => {
+                    const newSlideWidth = slides[0].getBoundingClientRect().width;
+                    track.style.transition = 'none'; // Disable transition for instant resize
+                    track.style.transform = `translateX(-${newSlideWidth * currentIndex}px)`;
+                    setTimeout(() => {
+                       track.style.transition = 'transform 0.5s ease-in-out';
+                    }, 50)
+                });
+            }
+
+            // ======================================================
+            // FAQ ACCORDION
+            // ======================================================
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const toggle = item.querySelector('.accordion-toggle');
+                toggle.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    // Close all other items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    if (isActive) {
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

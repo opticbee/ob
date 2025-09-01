@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optic Bee Soft Tech - Hyperion & IT Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slider .slide {
+            transition: opacity 1s ease-in-out;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Underline effect for nav items */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #f97316; /* orange-500 */
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-link:hover {
+            color: #f97316;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-[#1e293b] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+           <!-- Logo -->
+            <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+                <img src="images/oblogo.png" 
+                    alt="Optic Bee Soft Tech" 
+                    style="height: 65px; width: auto; object-fit: contain; margin: -5px 0;">
+                <h2 style="font-size: 1.5rem; color: #FF7F27; font-weight: 600; margin: 0;">
+                OPTIC BEE 
+                </h2>
+            </a>
+            </div>
+
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center space-x-8 text-gray-300">
+                <!-- About Us Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">About Us</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-56">
+                        <li><a href="our_story.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Partners</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Careers</a></li>
+                        <li><a href="awards.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                <!-- Regions Dropdown -->
+                <li class="relative dropdown">
+                    <a href="whatwedo.html" class="nav-link font-medium">What we Do</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Services Multi-column Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Services</a>
+                    <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                        <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="advisoryServices.html" class="block text-gray-300 hover:text-orange-500">Advisory Services</a></li>
+                                <li><a href="consultingservices.html" class="block text-gray-300 hover:text-orange-500">Consulting Services</a></li>
+                                <li><a href="ManagedServices.html" class="block text-gray-300 hover:text-orange-500">Managed Services</a></li>
+                                <li><a href="techinical.html" class="block text-gray-300 hover:text-orange-500">Technical Shared Services</a></li>
+                                <li><a href="enterprice_change_management.html" class="block text-gray-300 hover:text-orange-500">Enterprise Change Management</a></li>
+                                <li><a href="anaplan.html" class="block text-gray-300 hover:text-orange-500">Anaplan</a></li>
+                                <li><a href="netsuitepage.html" class="block text-gray-300 hover:text-orange-500">NetSuite</a></li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li><a href="OracleCloudEPM.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                                <li><a href="OracleCloudERP.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                                <li><a href="scm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                                <li><a href="hcm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                                <li><a href="oracle_clolud_cx.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud CX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative dropdown">
+                    <a href="development.html" class="nav-link font-medium">Development</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Industries Multi-column Dropdown -->
+                 <li class="relative dropdown">
+                     <a href="#" class="nav-link font-medium">Industries</a>
+                     <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                         <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="retail.html" class="block text-gray-300 hover:text-orange-500">Retail & Manufacturing</a></li>
+                                <li><a href="professionalServices.html" class="block text-gray-300 hover:text-orange-500">Professional Services</a></li>
+                                <li><a href="hightech-lifescience.html" class="block text-gray-300 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                                <li><a href="consumergoods.html" class="block text-gray-300 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                                <li><a href="financial-services.html" class="block text-gray-300 hover:text-orange-500">Financial Services</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                </li>
+                <!-- Resources Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Resources</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-48">
+                        <li><a href="customer.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Customer Success</a></li>
+                        <li><a href="insight.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Insights</a></li>
+                        <li><a href="search.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Search</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right side of Navbar -->
+             <div class="hidden md:flex items-center space-x-4">
+                 <!-- Location Display (Replaces Language Selector) -->
+                <div id="location-display" class="flex items-center text-gray-300">
+                    <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                    <span id="location-text">Fetching location...</span>
+                </div>
+                 <!-- Search Bar -->
+                 <div class="relative">
+                     <input type="text" placeholder="Search..." class="bg-gray-700 text-white placeholder-gray-400 rounded-full py-1 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                     <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                        <i class="fas fa-search"></i>
+                     </button>
+                 </div>
+             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-[#1e293b] text-gray-300">
+            <ul class="flex flex-col space-y-3">
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="our_story.html" class="block text-gray-400 hover:text-orange-500">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block text-gray-400 hover:text-orange-500">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block text-gray-400 hover:text-orange-500">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block text-gray-400 hover:text-orange-500">Our Partners</a></li>
+                        <li><a href="careers.html" class="block text-gray-400 hover:text-orange-500"> Our Careers</a></li>
+                        <li><a href="awards.html" class="block text-gray-400 hover:text-orange-500">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block text-gray-400 hover:text-orange-500">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="whatwedo.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>What We Do</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="advisoryServices.html" class="block text-gray-400 hover:text-orange-500">Advisory Services</a></li>
+                        <li><a href="consultancy.html" class="block text-gray-400 hover:text-orange-500">Consulting Services</a></li>
+                        <li><a href="ManagedServices.html" class="block text-gray-400 hover:text-orange-500">Managed Services</a></li>
+                        <li><a href="techinical.html" class="block text-gray-400 hover:text-orange-500">Technical Shared Services</a></li>
+                        <li><a href="enterprice_change_management.html" class="block text-gray-400 hover:text-orange-500">Enterprise Change Management</a></li>
+                        <li><a href="anaplan.html" class="block text-gray-400 hover:text-orange-500">Anaplan</a></li>
+                        <li><a href="netsuitepage.html" class="block text-gray-400 hover:text-orange-500">NetSuite</a></li>
+                        <li><a href="OracleCloudEPM.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                        <li><a href="OracleCloudERP.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="scm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                        <li><a href="hcm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                        <li><a href="oracle_clolud_cx.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud CX</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="development.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Developments</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Industries</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="retail.html" class="block text-gray-400 hover:text-orange-500">Retail & Manufacturing</a></li>
+                        <li><a href="professionalServices.html" class="block text-gray-400 hover:text-orange-500">Professional Services</a></li>
+                        <li><a href="hightechLifescience.html" class="block text-gray-400 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                        <li><a href="consumergoods.html" class="block text-gray-400 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                        <li><a href="financial-services.html" class="block text-gray-400 hover:text-orange-500">Financial Services</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Resources</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="customer.html" class="block text-gray-400 hover:text-orange-500">Customer Success</a></li>
+                        <li><a href="insight.html" class="block text-gray-400 hover:text-orange-500">Insights</a></li>
+                        <li><a href="search.html" class="block text-gray-400 hover:text-orange-500">Search</a></li>
+                    </ul>
+                </li>
+                 <!-- Mobile Location Display -->
+                <li class="pt-3 mt-3 border-t border-gray-700">
+                    <div id="mobile-location-display" class="flex items-center text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                        <span id="mobile-location-text">Fetching location...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+<body style="margin:0; font-family:Arial, sans-serif; line-height:1.6; color:#333;">
+
+  <!-- Hero Section -->
+<section style="padding:60px 20px; min-height:400px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/epm.png') no-repeat center/cover; color:#fff;">
+  <h1 style="font-size:2.2em; margin-bottom:15px;">Oracle Cloud EPM Solutions</h1>
+  <p style="max-width:800px; margin:0 auto 20px; font-size:1.1em;">Accelerate performance management with Oracle Cloud EPM powered by Optic Bee Soft Tech experts. Unlock better insights, planning, and execution for your enterprise.</p>
+  <a href="#solutions" style="background:#4caf50; color:#fff; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold;">Explore Solutions</a>
+</section>
+
+
+  <!-- About Section -->
+  <section style="padding:50px 20px; text-align:center; background:#f9f9f9;">
+    <h2 style="font-size:1.8em; color:#0d47a1; margin-bottom:20px;">Why Oracle Cloud EPM?</h2>
+    <p style="max-width:900px; margin:0 auto; font-size:1.05em; color:#555;">
+      Oracle Cloud Enterprise Performance Management (EPM) helps organizations connect data, optimize planning, streamline financial close, and enhance decision-making. At Optic Bee Soft Tech, we deliver customized EPM implementations that align with your business goals.
+    </p>
+  </section>
+
+  <section style="padding:60px 20px; font-family:Arial, sans-serif; text-align:center; background:#f9f9f9;">
+  <h2 style="font-size:28px; font-weight:bold; margin-bottom:15px; color:#222;">
+    Unlock Your Business Potential with Optic Bee Oracle Cloud EPM
+  </h2>
+  <p style="max-width:850px; margin:0 auto 40px; font-size:1.1em; line-height:1.6; color:#555;">
+    Optic Bee Soft Tech enables enterprises to plan, consolidate, and execute smarter with Oracle Cloud EPM. 
+    We deliver innovative solutions to ensure better accuracy, efficiency, and long-term success. 
+  </p>
+
+  <div style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:40px;">
+    
+    <!-- Circular Diagram -->
+    <div style="position:relative; width:400px; height:400px; margin:auto;">
+      
+      <!-- Center Circle -->
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+                  width:160px; height:160px; border-radius:50%; background:#fff; border:4px solid #0d47a1;
+                  display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:bold; text-align:center; color:#0d47a1;">
+        Enterprise <br> Performance <br> Management
+      </div>
+
+      <!-- Modules with data attributes -->
+      <div class="epm-item" data-title="Integrated Planning" data-text="Empower your business to plan faster and more accurately while reducing risks. Optic Bee delivers best-in-class planning methods to optimize efficiency across Oracle Cloud EPM."
+           style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); 
+                  width:120px; height:60px; background:#0d47a1; color:#fff; border-radius:10px;
+                  display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">
+        Integrated Planning
+      </div>
+
+      <div class="epm-item" data-title="Profitability & Cost Mgmt" data-text="Gain transparency into cost and profitability drivers. Optic Bee ensures smarter decisions with accurate, real-time data analytics in Oracle Cloud EPM."
+           style="position:absolute; top:18%; right:-10px;
+                  width:120px; height:60px; background:#0d47a1; color:#fff; border-radius:10px;
+                  display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">
+        Profitability <br>& Cost Mgmt
+      </div>
+
+      <div class="epm-item" data-title="Financial Consolidation" data-text="Streamline financial close and consolidation processes. Optic Bee leverages Oracle EPM to reduce cycle times and improve compliance."
+           style="position:absolute; bottom:18%; right:-10px;
+                  width:120px; height:60px; background:#0d47a1; color:#fff; border-radius:10px;
+                  display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">
+        Financial <br>Consolidation
+      </div>
+
+      <div class="epm-item" data-title="Accounting Reconciliation" data-text="Automate account reconciliation, minimize risk, and ensure accuracy with Optic Bee’s EPM-driven reconciliation services."
+           style="position:absolute; bottom:-10px; left:50%; transform:translateX(-50%);
+                  width:120px; height:60px; background:#0d47a1; color:#fff; border-radius:10px;
+                  display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">
+        Accounting <br>Reconciliation
+      </div>
+
+      <div class="epm-item" data-title="Enterprise Data Mgmt" data-text="Standardize, validate, and govern enterprise-wide data. Optic Bee helps integrate and synchronize business data for better decision-making."
+           style="position:absolute; bottom:18%; left:-10px;
+                  width:120px; height:60px; background:#0d47a1; color:#fff; border-radius:10px;
+                  display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">
+        Enterprise <br>Data Mgmt
+      </div>
+
+      <div class="epm-item" data-title="EPM Cloud" data-text="Unlock scalability and agility with Oracle EPM Cloud solutions delivered by Optic Bee experts, ensuring security, speed, and flexibility."
+           style="position:absolute; top:18%; left:-10px;
+                  width:120px; height:60px; background:#0d47a1; color:#fff; border-radius:10px;
+                  display:flex; align-items:center; justify-content:center; font-size:13px; cursor:pointer;">
+        EPM Cloud
+      </div>
+    </div>
+
+    <!-- Description Box -->
+    <div id="descBox" style="flex:1; min-width:280px; text-align:left; border-left:3px solid #0d47a1; padding-left:20px; max-width:450px;">
+      <h3 style="font-size:20px; font-weight:bold; color:#0d47a1;">Hover on a Service</h3>
+      <p style="font-size:14px; line-height:1.6; color:#333;">
+        Details will appear here when you hover on a service.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const items = document.querySelectorAll(".epm-item");
+  const descBox = document.getElementById("descBox");
+
+  items.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      descBox.innerHTML = `
+        <h3 style="font-size:20px; font-weight:bold; color:#0d47a1;">${item.dataset.title}</h3>
+        <p style="font-size:14px; line-height:1.6; color:#333;">${item.dataset.text}</p>
+      `;
+    });
+    item.addEventListener("mouseleave", () => {
+      descBox.innerHTML = `
+        <h3 style="font-size:20px; font-weight:bold; color:#0d47a1;">Hover on a Service</h3>
+        <p style="font-size:14px; line-height:1.6; color:#333;">Details will appear here when you hover on a service.</p>
+      `;
+    });
+  });
+</script>
+
+
+  <!-- Solutions Section -->
+  <section id="solutions" style="padding:50px 20px; background:#fff;">
+    <h2 style="text-align:center; font-size:1.8em; color:#0d47a1; margin-bottom:40px;">Our Oracle EPM Solutions</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px; max-width:1100px; margin:0 auto;">
+      
+      <div style="flex:1 1 250px; max-width:280px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color:#ff7043; font-size:1.2em; margin-bottom:10px;">Planning & Budgeting</h3>
+        <p style="font-size:0.95em; color:#444;">Streamline enterprise planning, budgeting, and forecasting with cloud-native solutions.</p>
+      </div>
+
+      <div style="flex:1 1 250px; max-width:280px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color:#4caf50; font-size:1.2em; margin-bottom:10px;">Financial Consolidation</h3>
+        <p style="font-size:0.95em; color:#444;">Automate and simplify financial close and reporting for compliance and accuracy.</p>
+      </div>
+
+      <div style="flex:1 1 250px; max-width:280px; background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h3 style="color:#2196f3; font-size:1.2em; margin-bottom:10px;">Profitability & Cost Management</h3>
+        <p style="font-size:0.95em; color:#444;">Gain insights into cost drivers and improve profitability analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section style="padding:50px 20px; background:#f1f1f1;">
+    <h2 style="text-align:center; font-size:1.8em; color:#0d47a1; margin-bottom:30px;">Key Benefits with Optic Bee Soft Tech</h2>
+    <ul style="max-width:800px; margin:0 auto; text-align:left; font-size:1.05em; color:#444; line-height:1.8;">
+      <li>✔ Certified Oracle Cloud EPM experts</li>
+      <li>✔ End-to-end implementation and support</li>
+      <li>✔ Scalable and secure cloud architecture</li>
+      <li>✔ Enhanced compliance and governance</li>
+      <li>✔ Continuous improvement and training</li>
+    </ul>
+  </section>
+
+<section style="padding:50px 20px; font-family:Arial, sans-serif; text-align:center; background:#f9f9f9; color:#333;">
+  <h2 style="font-size:2em; margin-bottom:20px; color:#0d47a1;">Customer Success</h2>
+  <p style="max-width:800px; margin:0 auto 30px; font-size:1.1em; line-height:1.6;">
+    At Optic Bee Soft Tech, we believe customer success goes beyond delivering solutions. 
+    It’s about building long-term partnerships, ensuring measurable results, and helping our clients 
+    achieve sustainable growth with technology-driven innovation.
+  </p>
+  
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px; margin-top:20px;">
+    <!-- Box 1 -->
+    <div style="flex:1 1 250px; max-width:300px; background:#fff; border-radius:12px; 
+                box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:25px; text-align:left;">
+      <h3 style="font-size:1.3em; margin-bottom:10px; color:#4caf50;">Personalized Approach</h3>
+      <p style="font-size:0.95em; color:#555;">We tailor strategies to meet your unique business challenges and goals.</p>
+    </div>
+    
+    <!-- Box 2 -->
+    <div style="flex:1 1 250px; max-width:300px; background:#fff; border-radius:12px; 
+                box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:25px; text-align:left;">
+      <h3 style="font-size:1.3em; margin-bottom:10px; color:#ff7043;">Proactive Engagement</h3>
+      <p style="font-size:0.95em; color:#555;">Continuous communication and updates ensure alignment with evolving needs.</p>
+    </div>
+    
+    <!-- Box 3 -->
+    <div style="flex:1 1 250px; max-width:300px; background:#fff; border-radius:12px; 
+                box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:25px; text-align:left;">
+      <h3 style="font-size:1.3em; margin-bottom:10px; color:#2196f3;">Measurable Outcomes</h3>
+      <p style="font-size:0.95em; color:#555;">We focus on delivering clear business value and measurable ROI.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile Responsive -->
+<style>
+@media (max-width:768px){
+  section h2 {font-size:1.6em;}
+  section p {font-size:1em;}
+  section div {margin-bottom:20px;}
+}
+</style>
+
+
+  <!-- Mobile Responsive -->
+  <style>
+    @media (max-width:768px){
+      section h1, section h2 { font-size:1.5em !important; }
+      section p, section li { font-size:0.95em !important; }
+      section div { flex-direction:column !important; max-width:100% !important; }
+    }
+    @media (max-width:480px){
+      section { padding:40px 15px !important; }
+      section h1, section h2 { font-size:1.3em !important; }
+      section p, section li { font-size:0.9em !important; }
+      a { display:inline-block; font-size:0.9em !important; padding:10px 20px !important; }
+    }
+  </style>
+   <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">About Us</h3>
+                    <p class="text-gray-400">Optic Bee Soft Tech provides innovative IT solutions and services to businesses worldwide, helping them achieve their goals.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Hyperion EPM</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">BI & Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Data Warehousing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Contact Info</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94301</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-orange-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-orange-500"></i>
+                            <span>info@opticbee.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2024 Optic Bee Soft Tech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+      <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Hero Slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = '0';
+                dots[index].classList.remove('bg-white');
+                dots[index].classList.add('bg-opacity-50');
+            });
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].style.opacity = '1';
+            dots[currentSlide].classList.add('bg-white');
+            dots[currentSlide].classList.remove('bg-opacity-50');
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto slide
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        showSlide(0); // Initialize first slide
+
+        // --- Geolocation and Location Display ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const locationText = document.getElementById('location-text');
+            const mobileLocationText = document.getElementById('mobile-location-text');
+            const apiKey = 'AIzaSyDqW6tsp_sUG5-Xf6aXFzYuqrvRiGehGXg'; // Your provided API key
+
+            // Helper function to update text on both desktop and mobile views
+            const updateLocationText = (message) => {
+                locationText.textContent = message;
+                if (mobileLocationText) {
+                    mobileLocationText.textContent = message;
+                }
+            };
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`;
+
+                        fetch(geocodeUrl)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                if (data.status === 'OK' && data.results[0]) {
+                                    const addressComponents = data.results[0].address_components;
+                                    let city = '';
+                                    let country = '';
+
+                                    for (const component of addressComponents) {
+                                        if (component.types.includes('locality')) {
+                                            city = component.long_name;
+                                        }
+                                        if (component.types.includes('country')) {
+                                            country = component.long_name;
+                                        }
+                                    }
+                                    
+                                    const locationString = city && country ? `${city}, ${country}` : 'Location Found';
+                                    updateLocationText(locationString);
+
+                                } else {
+                                    updateLocationText('Location Not Found');
+                                    console.error('Geocoding API Error:', data.status, data.error_message);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching geocode data:', error);
+                                updateLocationText('Could Not Fetch Location');
+                            });
+                    },
+                    (error) => {
+                        console.error(`Geolocation error: ${error.message}`);
+                        let errorMessage;
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMessage = 'Location Access Denied';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMessage = 'Location Unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                errorMessage = 'Request Timed Out';
+                                break;
+                            default:
+                                errorMessage = 'Location Error';
+                                break;
+                        }
+                        updateLocationText(errorMessage);
+                    }
+                );
+            } else {
+                updateLocationText("Geolocation Not Supported");
+            }
+
+            // --- NEW --- Mobile Menu Dropdown Toggle --- NEW ---
+            const mobileDropdownToggles = document.querySelectorAll('#mobile-menu .mobile-menu-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent link from navigating anywhere
+                    const submenu = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i.fa-chevron-down');
+                    
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                        submenu.classList.toggle('hidden');
+                        if(icon) {
+                            icon.classList.toggle('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce & Office of Finance | OpticBee Soft Tech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #2c9c76;
+            --accent: #ff6b00;
+            --dark: #333;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e55e00;
+        }
+        
+        /* Function Tabs */
+        .function-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .tab-btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            color: var(--gray);
+            transition: color 0.3s;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+        }
+        
+        .tab-btn:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .tab-btn.active:after {
+            width: 100%;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 30px 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Function Sections */
+        .function-section {
+            padding: 60px 0;
+        }
+        
+        .function-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .function-header h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .function-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .function-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .function-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .function-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .function-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Approach Section */
+        .approach-section {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+        
+        .approach-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            counter-reset: step-counter;
+        }
+        
+        .step-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding-top: 50px;
+        }
+        
+        .step-card:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        /* Capabilities Section */
+        .capabilities-section {
+            padding: 80px 0;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .capability-card {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            border-radius: 8px;
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .capability-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .capability-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .function-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .function-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Header -->
+    <header class="bg-[#1e293b] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+           <!-- Logo -->
+            <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+                <img src="images/oblogo.png" 
+                    alt="Optic Bee Soft Tech" 
+                    style="height: 65px; width: auto; object-fit: contain; margin: -5px 0;">
+                <h2 style="font-size: 1.5rem; color: #FF7F27; font-weight: 600; margin: 0;">
+                Optic Bee
+                </h2>
+            </a>
+            </div>
+
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center space-x-8 text-gray-300">
+                <!-- About Us Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">About Us</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-56">
+                        <li><a href="our_story.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Partners</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Careers</a></li>
+                        <li><a href="awards.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                <!-- Regions Dropdown -->
+                <li class="relative dropdown">
+                    <a href="whatwedo.html" class="nav-link font-medium">What we Do</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Services Multi-column Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Services</a>
+                    <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                        <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="advisoryServices.html" class="block text-gray-300 hover:text-orange-500">Advisory Services</a></li>
+                                <li><a href="consultancy.html" class="block text-gray-300 hover:text-orange-500">Consulting Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Managed Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Technical Shared Services</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Enterprise Change Management</a></li>
+                                <li><a href="anaplan.html" class="block text-gray-300 hover:text-orange-500">Anaplan</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">NetSuite</a></li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                                <li><a href="scm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Oracle Cloud CX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- Industries Multi-column Dropdown -->
+                 <li class="relative dropdown">
+                     <a href="#" class="nav-link font-medium">Industries</a>
+                     <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                         <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="retail.html" class="block text-gray-300 hover:text-orange-500">Retail & Manufacturing</a></li>
+                                <li><a href="professionalServices.html" class="block text-gray-300 hover:text-orange-500">Professional Services</a></li>
+                                <li><a href="hightech-lifescience.html" class="block text-gray-300 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                                <li><a href="#" class="block text-gray-300 hover:text-orange-500">Financial Services</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                </li>
+                <!-- Resources Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Resources</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Customer Success</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Insights</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Partner Portal</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right side of Navbar -->
+             <div class="hidden md:flex items-center space-x-4">
+                 <!-- Location Display (Replaces Language Selector) -->
+                <div id="location-display" class="flex items-center text-gray-300">
+                    <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                    <span id="location-text">Fetching location...</span>
+                </div>
+                 <!-- Search Bar -->
+                 <div class="relative">
+                     <input type="text" placeholder="Search..." class="bg-gray-700 text-white placeholder-gray-400 rounded-full py-1 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                     <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                        <i class="fas fa-search"></i>
+                     </button>
+                 </div>
+             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-[#1e293b] text-gray-300">
+            <ul class="flex flex-col space-y-3">
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Our Story</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Our Culture</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Community Impact</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Partners</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Careers</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Regions</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Advisory Services</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Consulting Services</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Managed Services</a></li>
+                         <li><a href="#" class="block text-gray-400 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Industries</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Retail</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Financial Services</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Manufacturing</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">High Tech</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Resources</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Customer Success</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Insights</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Partner Portal</a></li>
+                    </ul>
+                </li>
+                 <!-- Mobile Location Display -->
+                <li class="pt-3 mt-3 border-t border-gray-700">
+                    <div id="mobile-location-display" class="flex items-center text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                        <span id="mobile-location-text">Fetching location...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <style>
+            /* Custom Styles */
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+            .hero-slider .slide {
+                transition: opacity 1s ease-in-out;
+            }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+            /* Underline effect for nav items */
+            .nav-link {
+                position: relative;
+                transition: color 0.3s;
+            }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -6px;
+                left: 0;
+                background-color: #f97316; /* orange-500 */
+                transform-origin: bottom right;
+                transition: transform 0.3s ease-out;
+            }
+            .nav-link:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+            .nav-link:hover {
+                color: #f97316;
+            }
+        </style>
+    </header>
+
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Commerce & Office of Finance Solutions</h1>
+            <p>Driving digital transformation through integrated commerce platforms and modern finance operations</p>
+            <a href="#" class="btn">Explore Our Solutions</a>
+        </div>
+    </section>
+
+    <!-- Function Tabs -->
+    <div class="container">
+        <div class="function-tabs">
+            <button class="tab-btn active" data-tab="commerce">Commerce</button>
+            <button class="tab-btn" data-tab="finance">Office of Finance</button>
+        </div>
+    </div>
+
+    <!-- Commerce Tab Content -->
+    <div class="tab-content active" id="commerce-content">
+        <!-- Commerce Function Section -->
+        <section class="function-section">
+            <div class="container">
+                <div class="function-header">
+                    <h2>Commerce Solutions</h2>
+                    <p>Transform your digital commerce experience with end-to-end solutions</p>
+                </div>
+                <div class="function-content">
+                    <div class="function-text">
+                        <p>In today's digital-first economy, commerce is the cornerstone of customer engagement and revenue growth. Our commerce solutions help businesses create seamless, personalized experiences that drive conversion and loyalty.</p>
+                        <p>We combine strategy, design, and technology to deliver commerce experiences that meet evolving customer expectations and drive measurable business results.</p>
+                        <a href="#" class="btn">Explore Commerce Solutions</a>
+                    </div>
+                    <div class="function-image">
+                        <img src="https://images.unsplash.com/photo-1563013546-91b5d455e3f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Commerce Solutions">
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>E-commerce Platforms</h3>
+                        <p>End-to-end implementation of leading commerce platforms including Salesforce Commerce Cloud, Adobe Magento, and Shopify Plus.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Commerce</h3>
+                        <p>Create seamless mobile shopping experiences with responsive design and native app development.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Customer Experience</h3>
+                        <p>Design personalized shopping journeys that increase engagement, conversion, and customer loyalty.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commerce Approach Section -->
+        <section class="approach-section">
+            <div class="container">
+                <div class="function-header">
+                    <h2>Our Commerce Approach</h2>
+                    <p>A proven methodology for delivering successful commerce transformations</p>
+                </div>
+                <div class="approach-steps">
+                    <div class="step-card">
+                        <h3>Strategy & Planning</h3>
+                        <p>Define commerce vision, roadmap, and requirements based on customer insights and business objectives.</p>
+                    </div>
+                    <div class="step-card">
+                        <h3>Design & UX</h3>
+                        <p>Create intuitive, engaging shopping experiences across all touchpoints and devices.</p>
+                    </div>
+                    <div class="step-card">
+                        <h3>Implementation</h3>
+                        <p>Agile development and integration of commerce platforms with existing systems and processes.</p>
+                    </div>
+                    <div class="step-card">
+                        <h3>Optimization</h3>
+                        <p>Continuous testing, measurement, and enhancement to improve performance and conversion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Finance Tab Content -->
+    <div class="tab-content" id="finance-content">
+        <!-- Finance Function Section -->
+        <section class="function-section">
+            <div class="container">
+                <div class="function-header">
+                    <h2>Office of Finance Solutions</h2>
+                    <p>Modernize finance operations with intelligent automation and analytics</p>
+                </div>
+                <div class="function-content">
+                    <div class="function-text">
+                        <p>The modern Office of Finance requires integrated systems, automated processes, and real-time insights to drive strategic decision-making. Our finance solutions help organizations streamline operations, ensure compliance, and unlock new insights.</p>
+                        <p>We specialize in implementing and optimizing Oracle EPM Cloud, ERP systems, and financial analytics platforms that transform finance from a reporting function to a strategic partner.</p>
+                        <a href="#" class="btn">Explore Finance Solutions</a>
+                    </div>
+                    <div class="function-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Finance Solutions">
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Financial Planning</h3>
+                        <p>Implement advanced planning and forecasting solutions with Oracle EPM Cloud, Anaplan, and Adaptive Insights.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>Financial Close</h3>
+                        <p>Streamline account reconciliation, close processes, and reporting with automated solutions.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Profitability Analysis</h3>
+                        <p>Gain deeper insights into product, customer, and channel profitability with advanced modeling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Finance Capabilities Section -->
+        <section class="capabilities-section">
+            <div class="container">
+                <div class="function-header">
+                    <h2>Finance Capabilities</h2>
+                    <p>Comprehensive solutions for modern finance organizations</p>
+                </div>
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>EPM Implementation</h3>
+                        <p>End-to-end implementation of Oracle EPM Cloud for planning, budgeting, and forecasting.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <h3>Process Automation</h3>
+                        <p>Automate routine finance processes to improve efficiency and reduce errors.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data Management</h3>
+                        <p>Implement robust data governance and management frameworks for financial data.</p>
+                    </div>
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Reporting & Analytics</h3>
+                        <p>Develop dashboards and reports that provide actionable insights for decision-makers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="function-header">
+                <h2>By the Numbers</h2>
+                <p>Measuring our impact across commerce and finance transformations</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>250+</h3>
+                    <p>Commerce Implementations</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40%</h3>
+                    <p>Average Increase in Conversion</p>
+                </div>
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>Finance Transformations</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50%</h3>
+                    <p>Faster Financial Close</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

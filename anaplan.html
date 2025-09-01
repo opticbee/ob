@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optic Bee Soft Tech - Hyperion & IT Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slider .slide {
+            transition: opacity 1s ease-in-out;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Underline effect for nav items */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #f97316; /* orange-500 */
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-link:hover {
+            color: #f97316;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-[#1e293b] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+           <!-- Logo -->
+            <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+                <img src="images/oblogo.png" 
+                    alt="Optic Bee Soft Tech" 
+                    style="height: 65px; width: auto; object-fit: contain; margin: -5px 0;">
+                <h2 style="font-size: 1.5rem; color: #FF7F27; font-weight: 600; margin: 0;">
+                OPTIC BEE 
+                </h2>
+            </a>
+            </div>
+
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center space-x-8 text-gray-300">
+                <!-- About Us Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">About Us</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-56">
+                        <li><a href="our_story.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Partners</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Careers</a></li>
+                        <li><a href="awards.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                <!-- Regions Dropdown -->
+                <li class="relative dropdown">
+                    <a href="whatwedo.html" class="nav-link font-medium">What we Do</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Services Multi-column Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Services</a>
+                    <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                        <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="advisoryServices.html" class="block text-gray-300 hover:text-orange-500">Advisory Services</a></li>
+                                <li><a href="consultingservices.html" class="block text-gray-300 hover:text-orange-500">Consulting Services</a></li>
+                                <li><a href="ManagedServices.html" class="block text-gray-300 hover:text-orange-500">Managed Services</a></li>
+                                <li><a href="techinical.html" class="block text-gray-300 hover:text-orange-500">Technical Shared Services</a></li>
+                                <li><a href="enterprice_change_management.html" class="block text-gray-300 hover:text-orange-500">Enterprise Change Management</a></li>
+                                <li><a href="anaplan.html" class="block text-gray-300 hover:text-orange-500">Anaplan</a></li>
+                                <li><a href="netsuitepage.html" class="block text-gray-300 hover:text-orange-500">NetSuite</a></li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li><a href="OracleCloudEPM.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                                <li><a href="OracleCloudERP.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                                <li><a href="scm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                                <li><a href="hcm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                                <li><a href="oracle_clolud_cx.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud CX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative dropdown">
+                    <a href="development.html" class="nav-link font-medium">Development</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Industries Multi-column Dropdown -->
+                 <li class="relative dropdown">
+                     <a href="#" class="nav-link font-medium">Industries</a>
+                     <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                         <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="retail.html" class="block text-gray-300 hover:text-orange-500">Retail & Manufacturing</a></li>
+                                <li><a href="professionalServices.html" class="block text-gray-300 hover:text-orange-500">Professional Services</a></li>
+                                <li><a href="hightech-lifescience.html" class="block text-gray-300 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                                <li><a href="consumergoods.html" class="block text-gray-300 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                                <li><a href="financial-services.html" class="block text-gray-300 hover:text-orange-500">Financial Services</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                </li>
+                <!-- Resources Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Resources</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-48">
+                        <li><a href="customer.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Customer Success</a></li>
+                        <li><a href="insight.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Insights</a></li>
+                        <li><a href="search.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Search</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right side of Navbar -->
+             <div class="hidden md:flex items-center space-x-4">
+                 <!-- Location Display (Replaces Language Selector) -->
+                <div id="location-display" class="flex items-center text-gray-300">
+                    <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                    <span id="location-text">Fetching location...</span>
+                </div>
+                 <!-- Search Bar -->
+                 <div class="relative">
+                     <input type="text" placeholder="Search..." class="bg-gray-700 text-white placeholder-gray-400 rounded-full py-1 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                     <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                        <i class="fas fa-search"></i>
+                     </button>
+                 </div>
+             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-[#1e293b] text-gray-300">
+            <ul class="flex flex-col space-y-3">
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="our_story.html" class="block text-gray-400 hover:text-orange-500">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block text-gray-400 hover:text-orange-500">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block text-gray-400 hover:text-orange-500">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block text-gray-400 hover:text-orange-500">Our Partners</a></li>
+                        <li><a href="careers.html" class="block text-gray-400 hover:text-orange-500"> Our Careers</a></li>
+                        <li><a href="awards.html" class="block text-gray-400 hover:text-orange-500">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block text-gray-400 hover:text-orange-500">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="whatwedo.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>What We Do</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="advisoryServices.html" class="block text-gray-400 hover:text-orange-500">Advisory Services</a></li>
+                        <li><a href="consultancy.html" class="block text-gray-400 hover:text-orange-500">Consulting Services</a></li>
+                        <li><a href="ManagedServices.html" class="block text-gray-400 hover:text-orange-500">Managed Services</a></li>
+                        <li><a href="techinical.html" class="block text-gray-400 hover:text-orange-500">Technical Shared Services</a></li>
+                        <li><a href="enterprice_change_management.html" class="block text-gray-400 hover:text-orange-500">Enterprise Change Management</a></li>
+                        <li><a href="anaplan.html" class="block text-gray-400 hover:text-orange-500">Anaplan</a></li>
+                        <li><a href="netsuitepage.html" class="block text-gray-400 hover:text-orange-500">NetSuite</a></li>
+                        <li><a href="OracleCloudEPM.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                        <li><a href="OracleCloudERP.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="scm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                        <li><a href="hcm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                        <li><a href="oracle_clolud_cx.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud CX</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="development.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Developments</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Industries</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="retail.html" class="block text-gray-400 hover:text-orange-500">Retail & Manufacturing</a></li>
+                        <li><a href="professionalServices.html" class="block text-gray-400 hover:text-orange-500">Professional Services</a></li>
+                        <li><a href="hightechLifescience.html" class="block text-gray-400 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                        <li><a href="consumergoods.html" class="block text-gray-400 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                        <li><a href="financial-services.html" class="block text-gray-400 hover:text-orange-500">Financial Services</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Resources</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="customer.html" class="block text-gray-400 hover:text-orange-500">Customer Success</a></li>
+                        <li><a href="insight.html" class="block text-gray-400 hover:text-orange-500">Insights</a></li>
+                        <li><a href="search.html" class="block text-gray-400 hover:text-orange-500">Search</a></li>
+                    </ul>
+                </li>
+                 <!-- Mobile Location Display -->
+                <li class="pt-3 mt-3 border-t border-gray-700">
+                    <div id="mobile-location-display" class="flex items-center text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                        <span id="mobile-location-text">Fetching location...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        :root {
+            --primary: #0066CC;
+            --primary-dark: #004C99;
+            --primary-light: #E6F0FF;
+            --secondary: #FF6B6B;
+            --dark: #2D3748;
+            --light: #F7FAFC;
+            --gray: #718096;
+            --gray-light: #E2E8F0;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(to right, var(--primary-light), #ffffff);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 C50,100 50,0 100,100 L100,0 Z" fill="%23E6F0FF"/></svg>');
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .feature-description {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* Tabs Section */
+        .tabs-section {
+            background: var(--light);
+        }
+        
+        .tabs {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tab-header {
+            display: flex;
+            background: var(--primary-light);
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .tab-btn {
+            padding: 18px 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+            background: white;
+        }
+        
+        .tab-btn.active::after {
+            transform: scaleX(1);
+        }
+        
+        .tab-content {
+            padding: 40px;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .solution-card {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 8px;
+            background: var(--light);
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            background: var(--primary-light);
+            transform: translateY(-5px);
+        }
+        
+        .solution-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .solution-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .solution-content ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .solution-content li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            color: var(--gray);
+        }
+        
+        .solution-content li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        /* .testimonial-text::before {
+            content: """;
+            font-size: 4rem;
+            color: var(--primary-light);
+            position: absolute;
+            left: 0;
+            top: -20px;
+            font-family: Georgia, serif;
+        } */
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin-right: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .author-info h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Customer Success Section */
+        .customer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .customer-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid var(--primary);
+        }
+        
+        .customer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .customer-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .customer-card:hover .customer-icon {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .customer-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .customer-description {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+        }
+        
+        .cta .section-title,
+        .cta .section-subtitle {
+            color: white;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .features-grid, .testimonial-grid, .customer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .tab-header {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                border-bottom: 1px solid var(--gray-light);
+                text-align: center;
+            }
+            
+            .tab-btn.active::after {
+                width: 30%;
+                left: 35%;
+            }
+            
+            .features-grid, .testimonial-grid, .customer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Enterprise Connected Planning with Optic Bee & Anaplan</h1>
+                    <p class="hero-subtitle">Connect your data, plans, and processes across the enterprise to make faster, more informed decisions with our Anaplan solutions.</p>
+                    <!-- <a href="#" class="btn">Request a Demo</a> -->
+                </div>
+                <!-- <div class="hero-image">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'><rect fill='%23E6F0FF' width='500' height='300' rx='8'/><path fill='%230066CC' d='M250,50 L450,250 L250,250 L50,250 Z'/><circle fill='%23FF6B6B' cx='250' cy='150' r='50'/><path fill='%230066CC' d='M200,100 L300,100 L300,200 L200,200 Z'/></svg>" alt="Optic Bee Platform Visualization">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Optic Bee?</h2>
+            <p class="section-subtitle">Our platform helps enterprises connect data, people, and plans across the organization.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="feature-title">Connected Planning</h3>
+                    <p class="feature-description">Break down silos and connect your organization's data, plans, and business processes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Real-Time Updates</h3>
+                    <p class="feature-description">Make decisions with confidence using real-time data and collaborative workflows.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Powerful Analytics</h3>
+                    <p class="feature-description">Transform data into actionable insights with our advanced modeling and visualization tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="section tabs-section">
+        <div class="container">
+            <h2 class="section-title">Anaplan Solutions</h2>
+            <p class="section-subtitle">Comprehensive Anaplan implementation and optimization services</p>
+            
+            <div class="tabs">
+                <div class="tab-header">
+                    <button class="tab-btn active" data-tab="finance">Finance</button>
+                    <button class="tab-btn" data-tab="supply-chain">Supply Chain</button>
+                    <button class="tab-btn" data-tab="sales">Sales</button>
+                    <button class="tab-btn" data-tab="workforce">Workforce</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="finance">
+                        <h3>Financial Planning & Analysis</h3>
+                        <p>Optic Bee helps finance teams transform their planning processes with Anaplan. Our solutions include:</p>
+                        
+                        <div class="solution-grid">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Budgeting & Forecasting</h4>
+                                    <p>Dynamic planning with real-time updates</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Financial Consolidation</h4>
+                                    <p>Streamlined financial reporting</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Profitability Analysis</h4>
+                                    <p>Detailed margin analysis by product and region</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Scenario Modeling</h4>
+                                    <p>What-if analysis for better decision making</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="supply-chain">
+                        <h3>Supply Chain Optimization</h3>
+                        <p>Anaplan was named a Leader in the 2022 Gartner Magic Quadrant for Supply Chain Planning Solutions. Optic Bee and Anaplan can help your organization with:</p>
+                        
+                        <div class="solution-grid">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-boxes"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Demand Planning</h4>
+                                    <p>Accurate forecasting of customer demand</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-truck-loading"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Supply Planning</h4>
+                                    <p>Optimized inventory and production planning</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-tshirt"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Merchandise & Assortment Planning</h4>
+                                    <p>Strategic product selection and placement</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Sales & Operations Planning</h4>
+                                    <p>Integrated business planning process</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="sales">
+                        <h3>Sales Performance Management</h3>
+                        <p>Optimize your sales planning and performance with Anaplan solutions from Optic Bee:</p>
+                        
+                        <div class="solution-grid">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Sales Forecasting</h4>
+                                    <p>Accurate prediction of sales performance</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Incentive Compensation</h4>
+                                    <p>Motivate sales teams with fair compensation plans</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Territory & Quota Planning</h4>
+                                    <p>Strategic territory alignment</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-filter"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Pipeline Analytics</h4>
+                                    <p>Visibility into sales pipeline health</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="workforce">
+                        <h3>Workforce Planning</h3>
+                        <p>Align your human resources with business objectives using Anaplan workforce planning:</p>
+                        
+                        <div class="solution-grid">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Headcount Planning</h4>
+                                    <p>Strategic workforce capacity planning</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Compensation Planning</h4>
+                                    <p>Budget-based compensation management</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Skills & Training Planning</h4>
+                                    <p>Align employee skills with business needs</p>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Workforce Analytics</h4>
+                                    <p>Data-driven workforce insights</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anaplan Insight Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Anaplan Insight</h2>
+            <p class="section-subtitle">How Optic Bee leverages Anaplan to deliver transformative results</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Optic Bee's Anaplan implementation helped us reduce our planning cycle by 70% while improving forecast accuracy by 25%. Their expertise in both technology and our industry made all the difference."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">JD</div>
+                        <div class="author-info">
+                            <h4>Jane Doe</h4>
+                            <p>CFO, TechCorp Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The connected planning approach has helped us break down silos between departments. We're now working from a single source of truth, which has improved decision-making across our organization."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">JS</div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>VP Operations, Global Retail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Success Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Customer Success</h2>
+            <p class="section-subtitle">See how Optic Bee has helped companies transform their business planning</p>
+            
+            <div class="customer-grid">
+                <div class="customer-card">
+                    <div class="customer-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="customer-title">Manufacturing</h3>
+                    <p class="customer-description">Increased forecast accuracy by 35% and reduced inventory costs by 22% for a global manufacturer.</p>
+                </div>
+                
+                <div class="customer-card">
+                    <div class="customer-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="customer-title">Retail</h3>
+                    <p class="customer-description">Helped a national retailer optimize merchandise planning, resulting in a 18% increase in sales.</p>
+                </div>
+                
+                <div class="customer-card">
+                    <div class="customer-icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3 class="customer-title">Healthcare</h3>
+                    <p class="customer-description">Streamlined resource planning for a hospital network, reducing overtime costs by 27%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">About Us</h3>
+                    <p class="text-gray-400">Optic Bee Soft Tech provides innovative IT solutions and services to businesses worldwide, helping them achieve their goals.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Hyperion EPM</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">BI & Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Data Warehousing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Contact Info</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94301</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-orange-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-orange-500"></i>
+                            <span>info@opticbee.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2024 Optic Bee Soft Tech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and panes
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding pane
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Animation on scroll for cards
+        const animateOnScroll = () => {
+            const cards = document.querySelectorAll('.feature-card, .testimonial-card, .customer-card, .solution-card');
+            
+            cards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (cardPosition < screenPosition) {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Initialize card styles for animation
+        document.querySelectorAll('.feature-card, .testimonial-card, .customer-card, .solution-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', animateOnScroll);
+        // Trigger once on load
+        window.addEventListener('load', animateOnScroll);
+    </script>
+
+      <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Hero Slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = '0';
+                dots[index].classList.remove('bg-white');
+                dots[index].classList.add('bg-opacity-50');
+            });
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].style.opacity = '1';
+            dots[currentSlide].classList.add('bg-white');
+            dots[currentSlide].classList.remove('bg-opacity-50');
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto slide
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        showSlide(0); // Initialize first slide
+
+        // --- Geolocation and Location Display ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const locationText = document.getElementById('location-text');
+            const mobileLocationText = document.getElementById('mobile-location-text');
+            const apiKey = 'AIzaSyDqW6tsp_sUG5-Xf6aXFzYuqrvRiGehGXg'; // Your provided API key
+
+            // Helper function to update text on both desktop and mobile views
+            const updateLocationText = (message) => {
+                locationText.textContent = message;
+                if (mobileLocationText) {
+                    mobileLocationText.textContent = message;
+                }
+            };
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`;
+
+                        fetch(geocodeUrl)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                if (data.status === 'OK' && data.results[0]) {
+                                    const addressComponents = data.results[0].address_components;
+                                    let city = '';
+                                    let country = '';
+
+                                    for (const component of addressComponents) {
+                                        if (component.types.includes('locality')) {
+                                            city = component.long_name;
+                                        }
+                                        if (component.types.includes('country')) {
+                                            country = component.long_name;
+                                        }
+                                    }
+                                    
+                                    const locationString = city && country ? `${city}, ${country}` : 'Location Found';
+                                    updateLocationText(locationString);
+
+                                } else {
+                                    updateLocationText('Location Not Found');
+                                    console.error('Geocoding API Error:', data.status, data.error_message);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching geocode data:', error);
+                                updateLocationText('Could Not Fetch Location');
+                            });
+                    },
+                    (error) => {
+                        console.error(`Geolocation error: ${error.message}`);
+                        let errorMessage;
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMessage = 'Location Access Denied';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMessage = 'Location Unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                errorMessage = 'Request Timed Out';
+                                break;
+                            default:
+                                errorMessage = 'Location Error';
+                                break;
+                        }
+                        updateLocationText(errorMessage);
+                    }
+                );
+            } else {
+                updateLocationText("Geolocation Not Supported");
+            }
+
+            // --- NEW --- Mobile Menu Dropdown Toggle --- NEW ---
+            const mobileDropdownToggles = document.querySelectorAll('#mobile-menu .mobile-menu-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent link from navigating anywhere
+                    const submenu = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i.fa-chevron-down');
+                    
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                        submenu.classList.toggle('hidden');
+                        if(icon) {
+                            icon.classList.toggle('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

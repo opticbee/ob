@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optic Bee Soft Tech - Hyperion & IT Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slider .slide {
+            transition: opacity 1s ease-in-out;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Underline effect for nav items */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #f97316; /* orange-500 */
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-link:hover {
+            color: #f97316;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-[#1e293b] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+           <!-- Logo -->
+            <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+                <img src="images/oblogo.png" 
+                    alt="Optic Bee Soft Tech" 
+                    style="height: 65px; width: auto; object-fit: contain; margin: -5px 0;">
+                <h2 style="font-size: 1.5rem; color: #FF7F27; font-weight: 600; margin: 0;">
+                OPTIC BEE 
+                </h2>
+            </a>
+            </div>
+
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center space-x-8 text-gray-300">
+                <!-- About Us Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">About Us</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-56">
+                        <li><a href="our_story.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Partners</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Careers</a></li>
+                        <li><a href="awards.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                <!-- Regions Dropdown -->
+                <li class="relative dropdown">
+                    <a href="whatwedo.html" class="nav-link font-medium">What we Do</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Services Multi-column Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Services</a>
+                    <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                        <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="advisoryServices.html" class="block text-gray-300 hover:text-orange-500">Advisory Services</a></li>
+                                <li><a href="consultingservices.html" class="block text-gray-300 hover:text-orange-500">Consulting Services</a></li>
+                                <li><a href="ManagedServices.html" class="block text-gray-300 hover:text-orange-500">Managed Services</a></li>
+                                <li><a href="techinical.html" class="block text-gray-300 hover:text-orange-500">Technical Shared Services</a></li>
+                                <li><a href="enterprice_change_management.html" class="block text-gray-300 hover:text-orange-500">Enterprise Change Management</a></li>
+                                <li><a href="anaplan.html" class="block text-gray-300 hover:text-orange-500">Anaplan</a></li>
+                                <li><a href="netsuitepage.html" class="block text-gray-300 hover:text-orange-500">NetSuite</a></li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li><a href="OracleCloudEPM.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                                <li><a href="OracleCloudERP.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                                <li><a href="scm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                                <li><a href="hcm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                                <li><a href="oracle_clolud_cx.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud CX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative dropdown">
+                    <a href="development.html" class="nav-link font-medium">Development</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Industries Multi-column Dropdown -->
+                 <li class="relative dropdown">
+                     <a href="#" class="nav-link font-medium">Industries</a>
+                     <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                         <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="retail.html" class="block text-gray-300 hover:text-orange-500">Retail & Manufacturing</a></li>
+                                <li><a href="professionalServices.html" class="block text-gray-300 hover:text-orange-500">Professional Services</a></li>
+                                <li><a href="hightech-lifescience.html" class="block text-gray-300 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                                <li><a href="consumergoods.html" class="block text-gray-300 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                                <li><a href="financial-services.html" class="block text-gray-300 hover:text-orange-500">Financial Services</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                </li>
+                <!-- Resources Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Resources</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-48">
+                        <li><a href="customer.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Customer Success</a></li>
+                        <li><a href="insight.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Insights</a></li>
+                        <li><a href="search.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Search</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right side of Navbar -->
+             <div class="hidden md:flex items-center space-x-4">
+                 <!-- Location Display (Replaces Language Selector) -->
+                <div id="location-display" class="flex items-center text-gray-300">
+                    <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                    <span id="location-text">Fetching location...</span>
+                </div>
+                 <!-- Search Bar -->
+                 <div class="relative">
+                     <input type="text" placeholder="Search..." class="bg-gray-700 text-white placeholder-gray-400 rounded-full py-1 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                     <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                        <i class="fas fa-search"></i>
+                     </button>
+                 </div>
+             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-[#1e293b] text-gray-300">
+            <ul class="flex flex-col space-y-3">
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="our_story.html" class="block text-gray-400 hover:text-orange-500">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block text-gray-400 hover:text-orange-500">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block text-gray-400 hover:text-orange-500">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block text-gray-400 hover:text-orange-500">Our Partners</a></li>
+                        <li><a href="careers.html" class="block text-gray-400 hover:text-orange-500"> Our Careers</a></li>
+                        <li><a href="awards.html" class="block text-gray-400 hover:text-orange-500">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block text-gray-400 hover:text-orange-500">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="whatwedo.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>What We Do</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="advisoryServices.html" class="block text-gray-400 hover:text-orange-500">Advisory Services</a></li>
+                        <li><a href="consultancy.html" class="block text-gray-400 hover:text-orange-500">Consulting Services</a></li>
+                        <li><a href="ManagedServices.html" class="block text-gray-400 hover:text-orange-500">Managed Services</a></li>
+                        <li><a href="techinical.html" class="block text-gray-400 hover:text-orange-500">Technical Shared Services</a></li>
+                        <li><a href="enterprice_change_management.html" class="block text-gray-400 hover:text-orange-500">Enterprise Change Management</a></li>
+                        <li><a href="anaplan.html" class="block text-gray-400 hover:text-orange-500">Anaplan</a></li>
+                        <li><a href="netsuitepage.html" class="block text-gray-400 hover:text-orange-500">NetSuite</a></li>
+                        <li><a href="OracleCloudEPM.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                        <li><a href="OracleCloudERP.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="scm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                        <li><a href="hcm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                        <li><a href="oracle_clolud_cx.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud CX</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="development.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Developments</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Industries</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="retail.html" class="block text-gray-400 hover:text-orange-500">Retail & Manufacturing</a></li>
+                        <li><a href="professionalServices.html" class="block text-gray-400 hover:text-orange-500">Professional Services</a></li>
+                        <li><a href="hightechLifescience.html" class="block text-gray-400 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                        <li><a href="consumergoods.html" class="block text-gray-400 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                        <li><a href="financial-services.html" class="block text-gray-400 hover:text-orange-500">Financial Services</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Resources</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="customer.html" class="block text-gray-400 hover:text-orange-500">Customer Success</a></li>
+                        <li><a href="insight.html" class="block text-gray-400 hover:text-orange-500">Insights</a></li>
+                        <li><a href="search.html" class="block text-gray-400 hover:text-orange-500">Search</a></li>
+                    </ul>
+                </li>
+                 <!-- Mobile Location Display -->
+                <li class="pt-3 mt-3 border-t border-gray-700">
+                    <div id="mobile-location-display" class="flex items-center text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                        <span id="mobile-location-text">Fetching location...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+<body>
+
+  <!-- Banner -->
+  <div style="position:relative; width:100%; height:550px; overflow:hidden;">
+    <img src="images/custmore image.jpg" alt="Customer Success" 
+         style="width:100%; height:550px; object-fit:cover;">
+    <div style="position:absolute; top:50%; left:50%; 
+         transform:translate(-50%, -50%); 
+         font-size:24px; font-weight:bold; color:white; 
+         text-shadow:2px 2px 6px rgba(0,0,0,0.6);">
+      Customer Success
+    </div>
+  </div>
+
+  <p style="font-family: Arial, sans-serif; font-size:16px; line-height:1.6; color:#1a1a1a; max-width:800px; margin:20px auto; text-align:justify;">
+    Our company is dedicated to empowering organizations with innovative solutions that drive growth, efficiency, and digital excellence. 
+    We partner with business leaders, technology teams, and decision-makers to design, implement, and sustain impactful transformation strategies. 
+    Success for our clients is our highest priority, and we are committed to delivering measurable results that help them achieve their long-term vision. 
+    The case studies below highlight our expertise, proven approach, and unwavering commitment to client success in today’s digital-first world.
+  </p>
+
+
+  <div style="max-width: 1200px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); overflow: hidden;">
+    <header style="background: linear-gradient(120deg, #2c3e50 0%, #3498db 100%); color: white; padding: 20px; text-align: center;">
+      <h1 style="font-weight: 600; margin-bottom: 10px; font-size: 1.8rem;">Navigate Our Vast Library of Resources</h1>
+      <div style="max-width: 100%; margin: 15px auto; position: relative;">
+        <input type="text" id="searchInput" placeholder="Search resources..." style="width: 100%; padding: 12px 40px 12px 15px; border: none; border-radius: 25px; font-size: 14px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); outline: none; box-sizing: border-box;">
+        <div style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #3498db; font-size: 18px;">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </header>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 15px 20px; background: #f8f9fa; border-bottom: 1px solid #eaecef;">
+      <div style="flex: 1; min-width: 100%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
+        <h3 style="font-weight: 600; margin-bottom: 10px; color: #2c3e50; font-size: 16px; padding-bottom: 8px; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 8px;">
+          <i class="fas fa-industry" style="color: #3498db;"></i>
+          Industries
+          <span id="industryCount" style="background: #eaf6ff; color: #3498db; padding: 2px 6px; border-radius: 10px; font-size: 12px; font-weight: 600;">0</span>
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 10px; max-height: 250px; overflow-y: auto; padding-right: 5px;">
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="construction" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="construction" style="cursor: pointer; flex: 1; font-size: 14px;">Construction & Engineering</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="consumer" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="consumer" style="cursor: pointer; flex: 1; font-size: 14px;">Consumer Packaged Goods</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="financial" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="financial" style="cursor: pointer; flex: 1; font-size: 14px;">Financial Services</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="tech" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="tech" style="cursor: pointer; flex: 1; font-size: 14px;">High Tech</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="sciences" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="sciences" style="cursor: pointer; flex: 1; font-size: 14px;">Life Sciences</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="manufacturing" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="manufacturing" style="cursor: pointer; flex: 1; font-size: 14px;">Manufacturing</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="services" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="services" style="cursor: pointer; flex: 1; font-size: 14px;">Professional Services</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="retail" class="industry-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="retail" style="cursor: pointer; flex: 1; font-size: 14px;">Retail</label>
+          </div>
+        </div>
+      </div>
+      
+      <div style="flex: 1; min-width: 100%; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);">
+        <h3 style="font-weight: 600; margin-bottom: 10px; color: #2c3e50; font-size: 16px; padding-bottom: 8px; border-bottom: 2px solid #3498db; display: flex; align-items: center; gap: 8px;">
+          <i class="fas fa-cogs" style="color: #3498db;"></i>
+          Services
+          <span id="serviceCount" style="background: #eaf6ff; color: #3498db; padding: 2px 6px; border-radius: 10px; font-size: 12px; font-weight: 600;">0</span>
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 10px; max-height: 250px; overflow-y: auto; padding-right: 5px;">
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="advisory" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="advisory" style="cursor: pointer; flex: 1; font-size: 14px;">Advisory Services</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="anaphn" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="anaphn" style="cursor: pointer; flex: 1; font-size: 14px;">Anaphn</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="consulting" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="consulting" style="cursor: pointer; flex: 1; font-size: 14px;">Consulting Services</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="change" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="change" style="cursor: pointer; flex: 1; font-size: 14px;">Enterprise Change Management</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="managed" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="managed" style="cursor: pointer; flex: 1; font-size: 14px;">Managed Services</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="netsuite" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="netsuite" style="cursor: pointer; flex: 1; font-size: 14px;">NetSuite</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="cx" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="cx" style="cursor: pointer; flex: 1; font-size: 14px;">Oracle Cloud CX</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="epm" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="epm" style="cursor: pointer; flex: 1; font-size: 14px;">Oracle Cloud EPM</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="erp" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="erp" style="cursor: pointer; flex: 1; font-size: 14px;">Oracle Cloud ERP</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="hcm" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="hcm" style="cursor: pointer; flex: 1; font-size: 14px;">Oracle Cloud HCM</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="scm" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="scm" style="cursor: pointer; flex: 1; font-size: 14px;">Oracle Cloud SCM</label>
+          </div>
+          <div style="display: flex; align-items: center; padding: 6px 5px; border-radius: 5px;">
+            <input type="checkbox" id="technical" class="service-filter" style="margin-right: 8px; cursor: pointer; width: 16px; height: 16px;">
+            <label for="technical" style="cursor: pointer; flex: 1; font-size: 14px;">Technical Shared Services</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="padding: 20px;">
+      <div style="font-size: 16px; color: #2c3e50; font-weight: 600; margin-bottom: 20px;">
+        Showing <span id="visibleCount" style="color: #3498db;">0</span> of <span id="totalCount" style="color: #3498db;">0</span> resources
+      </div>
+      
+      <div id="resourcesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 20px;">
+        <!-- Resource cards will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sample resource data with image links
+    const resources = [
+      {
+        title: "Naturally Aligned: Hain Celestia's Financial Transformation with Fedora Consulting Group and Oracle Cloud EPM",
+        description: "Learn how Hain Celestia achieved financial transformation through strategic implementation of Oracle Cloud EPM with guidance from Fedora Consulting Group.",
+        industries: ["Financial Services", "Manufacturing"],
+        services: ["Oracle Cloud EPM", "Consulting Services"],
+        color: "#3498db",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJ75uOdd5S1ueaoCp0YPPxAG3x-PatkAA1g&s"
+      },
+      {
+        title: "Circular Savings: Darling Ingredients Finds the Sweet Spot in Financial Planning with Oracle Cloud EPM",
+        description: "Discover how Darling Ingredients optimized their financial planning processes and achieved significant cost savings with Oracle Cloud EPM.",
+        industries: ["Consumer Packaged Goods", "Manufacturing"],
+        services: ["Oracle Cloud EPM", "Advisory Services"],
+        color: "#2ecc71",
+        image: "data:image/jpeg;base64,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"
+      },
+      {
+        title: "Snacking Smarter: Jia J Snack Foods Scales and Streamlines Operations with Oracle Cloud EPM",
+        description: "See how Jia J Snack Foods improved operational efficiency and scalability with cloud solutions from Oracle Cloud EPM.",
+        industries: ["Consumer Packaged Goods", "Retail"],
+        services: ["Oracle Cloud EPM", "Managed Services"],
+        color: "#e74c3c",
+        image: "data:image/jpeg;base64,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"
+      },
+      {
+        title: "Shaking Up Beverage Operations: From Main & Complex/My to Strategic Clarity with Oracle Cloud EPM",
+        description: "Explore the journey from complexity to clarity in beverage operations through the implementation of Oracle Cloud EPM.",
+        industries: ["Consumer Packaged Goods", "Manufacturing"],
+        services: ["Oracle Cloud EPM", "Enterprise Change Management"],
+        color: "#9b59b6",
+        image: "https://media.istockphoto.com/id/1044808492/photo/young-woman-drink-smoothie-healthy-detox.jpg?s=612x612&w=0&k=20&c=bDKk4eOT2OD7tSOUHqMXO3eZxT631mhB2k78jI4hPhg="
+      },
+      {
+        title: "A Recipe for Success: Mixing Insights and Strategy with Oracle Cloud EPM",
+        description: "Learn how to combine data insights with strategic planning for business success using Oracle Cloud EPM solutions.",
+        industries: ["Professional Services", "Retail"],
+        services: ["Oracle Cloud EPM", "Advisory Services"],
+        color: "#f39c12",
+        image: "https://media.istockphoto.com/id/1161079470/photo/secret-recipe-food-cooking-ingredients-envelope-3d-illustration.jpg?s=612x612&w=0&k=20&c=ByTq_e1E3sbIKMfhSoYvQAl4nTCn8hStrRgQGHuM-pI="
+      },
+      {
+        title: "Global Restaurant Group reduces IT reliance by integrating retail and strategic planning with Oracle EPM Cloud",
+        description: "Find out how a global restaurant group transformed their IT infrastructure and reduced dependency through Oracle EPM Cloud integration.",
+        industries: ["Retail", "Professional Services"],
+        services: ["Oracle Cloud EPM", "NetSuite"],
+        color: "#1abc9c",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlBqESZT8vrWRzwvYjDxeDAVnxdzbJmpBT8g&s"
+      },
+      {
+        title: "Digital Transformation in Healthcare with Oracle Cloud HCM",
+        description: "How healthcare providers are leveraging Oracle Cloud HCM to streamline HR processes and improve patient care.",
+        industries: ["Life Sciences", "Professional Services"],
+        services: ["Oracle Cloud HCM", "Consulting Services"],
+        color: "#d35400",
+        image: "data:image/jpeg;base64,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"
+      },
+      {
+        title: "Retail Revolution: Implementing Oracle Cloud SCM for Supply Chain Excellence",
+        description: "Case study on how retail companies are using Oracle Cloud SCM to optimize their supply chains and improve customer satisfaction.",
+        industries: ["Retail", "Consumer Packaged Goods"],
+        services: ["Oracle Cloud SCM", "Managed Services"],
+        color: "#27ae60",
+        image: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PEBAPEBAQDw8QDw8QEA8QDxUQEBAQFRgXGBUWFhUYICghGBslIBYVITEhJSkrLjAuFx8zRDMsNygtLi4BCgoKDg0OGhAQFzElIB8tLystKy0tKzctMC4tLS0vKy0vNistMistLjM1LSs1KzcrLystKy0rLSstKzctLS0vLf/AABEIAKsBJgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAAAQIGAwQFBwj/xABDEAACAQMCAwUFBQQIBQUAAAABAgMABBESIQUTMQYiQVFhU3GRk9MUIzKBoTNCUvAHQ2KCkrHB0iRystHhFXN0ovH/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQIEAwUG/8QAKxEBAAICAQMDAgUFAAAAAAAAAAERAgMEBSExEkFRYdETMnGR8BQVIoGx/9oADAMBAAIRAxEAPwD1c0qZpV2uaTBqa1AVCC6idnjSSN5I8CRFdWePPTUoOV/OpKtpayrWJaaToXMYZeYqq7JkawjFgrEdQCVYA/2T5V5y3DYWsi1h5ighSwDMGKqSNTBcaiB44yM+8VmFectQyCnWFbhNZi1rzAgcx5GsISQGx1xkEZ9KzCsNnRRS1DOMjOM4zvjzqB0VCSZF/EyrtnvMBtkDx9SB+dToCite5voYiiyyxxtIdMaySKhc7bKCe8dx08xWxQFFRdwoLMQFAJJJwAB1JPhWCzv4ZlV4pY5UcAqyOGDAjUMY8xv7qDZorBeXkUC65pEiTUq6pGCrqYgKMnxJIFZ6AorXN9DzeRzY+cRqEPMXm6fPRnOKzk0BRUY3DAMpDKwBVgcgg9CCOoqVAjSNSNYnlVThmVSQzAFgCVXGo+4ZHxFUM1A0RTI+rQytoco+kg6XHVT5EZG1az8TtgZFNxAGhAMymZAYgehcZ7oPrWokZyKgawrxS2bl4uIDziwhxMh5pU4YJv38Hyoe+hEghM0Qmb8MJkUSnbOyZydgT08K1EoyEVEishFLFasYyKWKZkXIXUuo5AGRkkYJ29Mj41LFatEMUAVPFGKWI4oqeKKg1iKWKyEUYrdvFACqMOy18IVhjFvBJbW11DDeQzutxdSSrpDyYQGLJ+8bvOS4BHnV8xWMGX+CP5rf7KzlUtQp3EuzfEzM32a5aOMc4RSvxC4YiI2zRxRtAVK6llOsyks2+rc7CN72Y4kwLwMIGaG0jeE8TuZJHWKS8ZkN4VEgH38LA/2CvTrdlM38Efzm/wBlZA038EXzm/2V5TENxKu8Z4BeTLa6JvvobC5t5J+a0cpmlNt31dFBH7GTLADqNt9uPx7s/wARt4XaC5uXDSmIJ9vuXflve2ptwGOSmmP7QGcZIDb6hV9DTfwRfOb6dTDTezi+c306zLUKLcdleKlGZJQrlY1Ef26cychZpX5Bu8czYOp19divTes8XZDiDMrT3twxLxLJy+I3CAwrZKhChNIDG5UOWCqSM56lauuuf2cXzm+nRrn9nF89vp1lVFi7M8aZ5TLdt95BCheO+mTLf8PrVYwoEZBSciRCCdYz+I4yydkL8F5EuHMixXEETNfThmtzec2OJpNyrGHMZk3ZSQd9INXbXP7OL5zfTo1z+zi+c306ChWvY3iGpJpJTzVivIlDX9xPy45LqGWKPW4y+mNZFLEZJCdcAjNB2W4m8mJ7mQQG5jeblcSuRJOoW51uuApgBMluOSjafu/QZu+uf2cXzm+nRrn9nF85vp0FI7R9k7+7t7FGaKWeLhtzaXLvcGMNPMtuNeeW2tcxOSMAnIpx9mOKtLPzrtzFJdRMTFfTx8y3E+shUABtyIvu8RsA2TnoDV21z+zi+c306Nc/s4vnN9OgoUnZPi7sUkujJC1lLb73sw6wyRhHj0kSEsyOZTh9uu2Dut2OuOZbnmvot50kj/4ybWFFk8J7xzk80qd893V1BKm4a5/ZxfOb6dGuf2cXzm+nQVa37NXUllZ29y55kF8s7sl7cs5hVnxmYnWz6WGRkLnpgAVp2HZjihlT7RdPyRcxSTCO/uNVyFS51yAYXkqzSW33CnQBEfzuuuf2cXzm+nRrn9nF85vp0FP7Rdlbu4vXniZI1IiaObnsrROsM0RblKm7fe7HWMdfDBxLwPjLyRzO6IftKsYRxG4aFIRFbRt3VRC7HlTsATpDSbhtRIuuuf2cXzm+nRrn9nF85vp0FEj7J8XWHuXjLcGJYSTeTtCIxYxR91CMKxuEdtYAYBs5z3anF2a4qFh+/fIhvI3U8UuDyuYJeVofR33BaP7yQSaQNhlQTeNc/s4vnN9Olrn9nF89vp0FZm4HxFuH28KXHIvYpHzItxNIphkMkZ1PISzuscgcZyBJGuNgK4/EOxfEp7aWGW7MzSWt/BlriVQSRapak4HiLd3k82mcYIY1ftc/s4vnN9OjXP7OL5zfToK7wfs7PbXrXAlfkySXZkiNzLIjIwh5B5bZXWNEmW697cnO3Lk7L3n2SWz+z2RKqwivROVuLgmdJSXHJPLZguWOpssAcEdLrqn9nF85vp0a5/ZxfOb6dUUufs5es9pLHDbxSKII7l3uhcKYop3kCmNrbEhw7MGUxMGbrhQa3bzgtyeITXKxrJDNAseReNA6ssbrsqxE5yww4dSOuDirKWm9nF85vp0tU3s4vnN9OqPOLjgfGF+y27TyzzmLiTyXC8QuLaJn/wCFW3dtC4BTLAR4w2h26swrffs1xZ5bjmXjGOWWEh47uaEvCJ4XZViUYgZYkkTMbDVr365F31Tezi+c306WZv4IvnN9OqKZL2Tuke7aGV1W4uLmVcXkyvpeC3RBrIbSdUcu43ClQCMDTl4JwTikd3FLcTq0KwRq6R3U7oCIgjR8qUHX95mTmlte+M42NtzN/BF85vp00MuRlIwPEiVifhoH+dOwnijFTxRit2iOKVZAKKljAVo01lIpYrVvOmPTUgKlimBUtaICpgUwKkBWZlaAFTApAVKsy0KdFFZU6KKKAooooCiikzAAkkAAZJJwAKB0VU+L/wBIXD7fKq7XLjwgAZf8ZIU/kTVauf6Trlv2NtFEPAys0pI9y6cV3aum8nb3jDt9e3/XLs5mnDzl+z0+SRVxqIXJCjJAyx2AHqalXj192pu7tY+dysRXENxGEjK/eQsHQnc5GQNqsFr22uSASsTDx7rA/oa9c+k8jHzX7sY8/Vl8vQaKq1p2yRv2kTL6owb9DjH613rHiUM/7OQMfFejD3qd64tnH26/zYunDdhn+WW3RRRXi9Cop0UCpGnRVEaWKkRSqiOKWKnSIpYhijFTxRirYhRUsU8UtEMU6lilSxDFGKyYoxS0pDTTxUsU8UspECpAU8UVLUU6KKiinSp1AUVgvIXcAI5jIYEkDOR5df5xWWJSFUE6iAAW6ZPiatdkSooqudte1CcOhyMPcSZEMZ6ert/ZH6nb1G9WrLbnGGEXMpnnjhjOWXiGbtT2pt+HJmQ65mGY4FPfb1J/dX1P5Z6V492i7U3d+x5r6Ys92BMrEPLI/ePqf0rlXt3JPI8srtJI5yzt1J/0HoNhUYU1H06mv1/C6br48XPfL5+38t+e5PNz3TUdo+PuyW8X7x/If61sgZ2pVktxlh8a+lPaHG3gMbeVbdi3UfnWrWW1OHHwrkzi4l749pdFWxW1FJ0YEgjoQcEH0NalTibB9K48ot0RNLdwftQy4S47y9BKB3l/5gPxD16++rdHIrAMpDKRkEHII9DXlldfs/xprZtLZMLHvDroP8Q/1FfK5XBiY9WuO/w79HKmP8c/Hyv1FJGDAEEEEAgjcEHoRTr4z6JUVp3lrK7KUmMajTlQuc4bJ3z4gY//AE1u1Zjt5SJKjFFFRSxRToqiNFSooI0VKigjRUqKBUU6MVAqr3H+H8RkkL2dysA5aDDEMCyLckAq6OArO9tqIw2lW3GBmxUUFPjs+MmV0+1YiR0QSssOp4eYpLqvIxzeXtnOjVqGjowyLZcc0MPtVtrPP7zKDpOgckqFjHdMmrKnJCae8zZNWynQVaw4bxXnxPcXKNGkMinRpAErLhWMYjGtgc5OsL0wg3NaEdhxSBo1SURISrSlrtrqPKBAztJPGWAck/dLp/DnWpY1eK5Xajg5vrV7YOsZaS3kDsjOoMUqSgFUdGwdGNmB360HAgi4uVKvxC3acbBITDHqOUL7tE5BAII7p2kAOSQwyDhfGVGVvEaRnVpNbKVU6d1QcrGjVg4wGKlgGU4IyP2L3LpcyRSsXbmR8zCF5YpDoRpCo/ZAAYIGc+eccvZG7IXTxKWI6JVcRrNpLPEsasC8zNlSurvM34iBjrQK74XxtgFW8jZWYF9RjQhG5XMTuwZK4EwXBVgWBLN4W22QqiKdyqKCeuSBvVUuey92qyCK+mOshIyZJuZBG1xqbDNKytpiZlGpCxKjvAYUW5RgAeW3nQYL+8SCKSaQ6Y40Z2PoPLzPpXz9x7i8l7cSXEnVzhVzkRxj8KD3fqST416J/S/xYrHDZKd5TzZRn9xThAfQtk/3Kp3BezMkjIZFBBZe7uVxrUMTp3cAEnCkZCt3lIwf0nStevRq/H2ecvH6Pj87PLbn+Fh4jz+quVt2y4GfOtZlIJBGDkjScgg+W9dfh1g87cuPRqClsPKkWQMbAucZ3r9BllGMXM9nyYiZmoa1Z7Md4+6t3tDw3kTOY45Vti5WF5FbD4AzhiBnx/8ANaln+9+X+tYjZGev1R7tTjOOVT7NqnGcEHyIqzC1guEhit4o2lIVn0CSOTljuuxeQhWwf1HlVbnhaNmRxpdThlyDg+8bVx6t0bLiqmPafL3z1zj38w6VFC748c+A6mupc8NRVdst3dY2IcalYjBKjqBoB9cncYrny2RjMRPu9ccZnw1ImyKnWC3PUVYOBcNimV3k5jFHjTRHjOHIUMfQZJ/umvPbnGuPVL014znNQ6PY7ifW2c+bRE/Fl/1H51a683u1+zXLCJi3JkGlj1JGCQceuRXodtMJESRfwuqsPcRmvi87VEZRsx8ZPpcXOZicJ8w4HaPh15JPDLa3CQlI5FEbyOFkkKvpJUbEAlCcg7A9NjWha8N43G7Sc+GTU0TMjyqFdVZAVOIO65RSC64UnOEXOV63H+ANdSxSpMtu0aSoZBEZJgGxgxsX0IQRnJRj5Fetc6Psteovd4kxkEQQPJHO6h9bMToFwAV0tjB7wIHf0gJXA6m1waw4kJo3u7pXVElDRxlQsjOsOnKiMdGSYg5z3vLIqyVUX7GMxRpLueVkkmkyHlSQl1u0ASTmZjIW5QAjYcroNW1g4JbSxW8STOZZwmqaQkkNM3ekK56LqLYXoBgDYUG9Sp0UCop0UCop0UCop0UCxRRj1P6UqB1iuYRIukll3ByOu1ZMmjNBxJgqsV13pwTspOk7Ho3l3T4+NTaIAnDXmQ24Dfizt8PHO3X027NFBxGdf4rwZwF0ggYGlen5j9ehzThlXOrXeYHew+ApzsBhv/cH+Eeldqig4gwBp1Xu6ldR3YZH4vQ9B029M7vr43h2H72Mju+I2Hh+vrXTuIGcgiRkx4L/AD/O3hkHD9ifCjnyDTnJzktkg759xHuNBo93Y67xgU15B20sTjfbHh7gc+GR2ID3V/F+Ffxfi6ePrWo1i+QRPIBklgd8+7yrfFB4T/SFfGbiVwc5ETLCvpywAw/xa/jWgvaG6y2qQShs60lRZEYlteSpGD3sN7xXrvDOw9pHJLPOi3M8ssspMgzGmti2FQ7HGepyfd0ruycMt2XQ0ELJ00mJSuPdiv0P914+GGOuNfqjGIi/t/IfJ/oduWU5znVy+dzK0khdzqd3Z2Y9WYnJPxrZbHjXqfGf6N7WWRJLdjbd771FGpCvjoB/C36elWDhfZmytgBHAhYf1jqJJD/eb/IYFdWXW9GOETjEzPx4r+fR4R0zbOUxMxXy8Wv+Iy3DF5ZC5JzjPdXYDuqNl2A6Dwp2fQ+8V7df8DtLgFZbeJ/XQFce5huPyNVyz/o8gjmZmkd7fYpF0bPiGcdQPDGD8N8a+s8ecJicfTXt9lz6dtjK4m791HsuJSQnKlTsRhhtgkE7jBxkZ61huZ2ldpG3Zjk16lxjh0ESW6xwxxj7Zag6UAyNY6+dZeLdlrS4B+7WJ/CSIBGB9QNm/OufDq2n13OFX7vbLgbPTUZX9Hm6dB7hWzJfStnVIzZGNznbf/ud/U+Zq78F7JQwqDNieQDG4+7HuXx/PNdw2UONPKj0/wAOhcfDFee3qWr1dsb+rWHCzrvNPKITvW9b3MkR1RuyEgglTjINW7iXZOGQhovuGyNQAyhHjhfA+7b/ADro2PBbeEALGrN/G4DMfzPT8sU2dR1TjdX9Fw4eyJ8/7ed5z61eex8+u2C+zdk/L8Q/6v0rpXHDoJBh4kb+6Mj3HqKw8K4WtsZAjEo5VlU7lTuCM+I6Vycjl4btfpqph76uPlrzu7hHiZXUM88EqMGJc4wc9fDPj57VrMy75a7I6atsLjfbH/KNx5+Ph26K+c7HAlAyyF74nUy7dDkt3gQMYx/p41kcB3OHu1DFjgAhMHV0/wAG35edduig4THuqS153k1AKdwdsgnpnf3VLK40h7zvFRq3J222Ph+MH1xXbpUHHljxlma6A5mkBXzgY1ZxjOOg8envrHrGAmb7Yhgf3jsNif7oO/mfUV3KKDTSyIZWE0pGrUVZyykeX8+Z9MbtKigdFKigWfQ/pRmjNGaoAadRIooCnmkDRQOnUM06CVFLNMUBTpVVrvjF+lzdpHb85EMQt1ZJokdTGjOxmETKcMXGASfQYyYLVRVLt+03EVysnD5HzPLok0ygclriZI1KpE2HCRq2T3SCpLKWGcsfam+05fhkqvyjIEXnPqPKjk0qRFgMusqQ2nJQhdZBACxW8s5lZXjCxfeaXBG+Cuj94ncavAdK3arPB+N3lxdpHJaPbQfZJJHLLIQZT9mKAuyKoPfnGkEnuHIU7VZqszaRFCikWFQMyjxqK5vaL8Nv/wDNtP8ArFdauNx6UOsAXLabu2dsAnCq4JJ9BXTF0h/e/Q0GaioCVT41IGgx3TOEYxgM+O6D/wCSM+7I94qNm8pUmVFRtTYCtqGnPdOfdWt2guJorWeSBdcyRs0ahGfLDp3VBY+4An0NV5O1F6rqhsJZF5UbGZUuFLE8gHuNCuN5ZdsggQkkLnFW+1Uld7XGiuX2f4nJdRvI8Qh0zSwgB9eoxHRIc4G3MWVR5hVbbOB1KiiiilQOlRRQFFKiqh0qKWaB0Us0ZoHRSzRQFLajNRzVU80aqWaVWhI0s1HNa9wJsgxtHpwMq4Jzvucj0pQ280A1zDNKAFMtuJBnWDkAE404BOcYP6+NRa7kwPvrTVlycsQNPhtnORhienT31B16p1mvGo+UFVHRmiWYXMiyOrj9q4ZW/ZMOgGWUgHGCQO6txKPxS2406g/ex+6AhOfHXny6iom6lJCrLakkkHDbjbJOCd8Yb+RUHLZ+MEJhF78biQNy0KyBTpIKysAM4GBknIJK4IOxw2Xi7OhnSBIxJh1UAlkwoJDBzgBtZU4yV05CnIrfguZSSOdbNnOAG3yV7i+7x88UNdTBgpltge7kAnOG8cE9Mb+uB51BwuTxxJJJA0csWublRdwuI5ZlfBBZVLxxoUTLAEyb9KVivHdjKsCszwudL61TMDiYaSw7ol0aVBO2TnPTvLdy6WPOtT1AOokByRpzg+j/AA99AvZfbWmMA5BOME489/D40HM4JxLiLXrW9zGOUlu7PKkDJHzPuOXpkJIYtqnJA2GkAEkNVprRsZpHY6pIHUDpESWBz45PTY/Ct6gKMUUUCwKMCsc9zHHu7qgOcamC9Nz1rKDSgUUUUGpxVJWhlEJIlKEIQQCG8NzVbuv/AFwd9OQ+mOT7kKqhyzW2Bkv+NVF1pOQpOM1abtyqEgqpGN22XqOtc+K7lwAZ7Vj4nV138s+hoOFa8Q4s80kKRRJysFmaB47fOmUgI5bLAsIgcDK6mI1DBM1/9bJ5mEGxAhdY1Oy3GGYJIQWyYBjVp9RuR2kvJfGa0zlehOMH1J33wPzqX2yQFlMtrq20jU23eAw2/lny3xQanBJOJmY/alhWAo2kKAJFYLb6NWGIyS1yCBkDQuCQcnvVynupd/v7UEZzucAqTnO+3u9DTF1Kf6212XLd490A7nGfVRvQdSlXKN1LkBZrU5UZ3OzYA2x4Zz19KS3cuf29qRtnLHPh0I28T59RVR1s1EmtDVcturW5QnKnvnK5ONxsdtP61sw69I1lS/joBC/lmqMuaWaRNRzVpE80ZqGaM1aE80VDNFKLTJpZpE1HNKU9VLNRJpZq0JZozUc0s1aCkt42JLIjE9SUBJ2x1921I2sR6xxnwPcXcfD1NSBpk1KD5KddC58e6N6ilnEN1ijHXcRqOu3l61PNMGpQilrECCI4wQdQIRQQ3TPTrWRoIySSiEkYJKgkjpgmgGpA1mYVD7JFjHLjxkHGgYyOm35n40xZxeyj/wAC1lFMVBCO3RTlUVTgDIUA4HQbeFZKKKgK59vxy1kBYSgKNffdWiRgpUEq7gBl764YEg+GcGtN+1NukrxSrNFpMojdkDrPymRZeWIyzd0yLkMqnGSMgEji2cHCJpcqZDJJPIAGjdVZ2ZDk93ThjCul23bQ250nAWTiF3ZlC0skbKiSscPqbQudeAu5xpPTxXzFO347aO0kayqDCBzMgoseVRgCzAAbSJt/aqjxpwlruZNUulYxbvFgRrC8EzW+p3Lfv/aQVAG4jdt9hW/NZcFlVhqlyTk6Um1hiLYDu6c5IhgIBG4JO+TVuSlyivonleBXDSxqrSIN9AYkLk9Ae6dutbNUvgd9wm1eaWF5I1kwmpw/L0lpLgmMEZ0ZmlkL9AM7hV2tPDuJQ3IZoX1hG0N3WXBwD0YDIIIIPQ5qDZdAwwQCD1BGRWE2UWQeWmQQQQoG46e+tiig11soR0ijG2NkXp8Kl9ljyTy0ySSToGST1J99ZaKDAbOLf7uPfc9xd98+XnvUTZQk5MaHK6SNIwVyDjHTqB8K2KRNVGutlCvSNB0/dB6dP8qQtIh0ijGNtkX/ALVnJqJNWkRRVUYUBR5AYHwFBNImkTWohDzSJqJNLNapLSzRmoZozVotPNKo5opRbITUc0E1EmpENgmlmkTUc1qhPNLNRzSzVpE81LNY80walDIDUs1jBqVSYVkFTFYs1NTWZGQGpVAVIGsSpSyqgLN0GOgJO+3QVgPE4B/WDw8D4jK/Hw862GUEYIBHkRkUjCh/dU/3R/PgPhUHJnsuHsZC8UJaRyJC0feZgcnfrj9DTMHD0McnLiBjJMbiM9wjG428Nf8A9j61tC2m3y0TN3dLGPPj3s/kSB7z57QS0uAANcTFSCGaMZx4jCgenTyqDBJBw/TrMMZBIbIhJYlSSpxjJIOT+R8jWpwzg/DoYWjGJlZlZ3kUMTugX8CgADCAYAxjPma6r29xgYaLILAZTbTpAA6eYz8KBazYxqhznry+q4X9chj8KDTax4aRpMMJWNQwUxbKqqRsMfwhlx5ZHpW5by2sOQmiMEIxwMDAUaSfQKB7gKxpa3G2eQv4sjRnbYAfDOfhW1a25APMEZJIOVXHToDtvjA3/wAqBpfRE6Q4znTjBB1bbeh3rZrGIEHRVGOmFG384FToClTpVQVE0yagasIRNRJpk1A1qGZImok0yagTW4hJkE1EmkTUSa1TNpZpZqOaM1aS0waKhmilFtgmoE0zUTWYepE1HNM1E1oPNLNI0qonmmDUKkKCYNSFYxUxWZGQVJTUBUxWJVkFSFQFSFYkTpilTFZU6KKKgYooFFAUUUUBSp0qApU6Rqoiagakaia1CIGompGoGtwyiTUCabVA1uGZImok0zUDWoZPNLNKitBg0UhRUH//2Q=="
+      },
+      {
+        title: "Future-Proofing Financial Services with Oracle Cloud ERP",
+        description: "How financial institutions are using Oracle Cloud ERP to adapt to changing regulations and market conditions.",
+        industries: ["Financial Services", "High Tech"],
+        services: ["Oracle Cloud ERP", "Advisory Services"],
+        color: "#8e44ad",
+        image: "data:image/jpeg;base64,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"
+      }
+    ];
+
+    // Initialize the resource grid
+    function initResourceGrid() {
+      const grid = document.getElementById('resourcesGrid');
+      grid.innerHTML = '';
+      
+      resources.forEach((resource, index) => {
+        const card = document.createElement('div');
+        card.className = 'resource-card';
+        card.dataset.index = index;
+        card.dataset.industries = resource.industries.join(',').toLowerCase();
+        card.dataset.services = resource.services.join(',').toLowerCase();
+        
+        card.style.cssText = `
+          background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+          display: flex; flex-direction: column; width: 350px; height: auto;
+        `;
+        
+        card.innerHTML = `
+          <div class="header" style="height: 150px; width: 350px; background: linear-gradient(120deg, ${resource.color} 0%, #2c3e50 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; font-weight: 600; background-image: url('${resource.image}'); background-size: cover; background-position: center;">
+            ${resource.industries[0].substring(0, 2)}${resource.services[0].substring(0, 2)}
+          </div>
+          <div style="padding: 15px; flex: 1; display: flex; flex-direction: column;">
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #2c3e50;">${resource.title}</h3>
+            <p style="color: #7f8c8d; margin-bottom: 10px; font-size: 12px; flex: 1;">${resource.description}</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
+              ${resource.industries.map(ind => `<span style="background: #eaf6ff; color: #3498db; padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: 500;">${ind}</span>`).join('')}
+              ${resource.services.map(ser => `<span style="background: #eaf6ff; color: #3498db; padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: 500;">${ser}</span>`).join('')}
+            </div>
+            <a href="#" style="display: inline-flex; align-items: center; justify-content: center; background: #3498db; color: white; text-decoration: none; font-weight: 600; font-size: 12px; padding: 8px 12px; border-radius: 5px; margin-top: 8px;">
+              Read More <i class="fas fa-arrow-right" style="margin-left: 4px; font-size: 10px;"></i>
+            </a>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+      
+      updateCounts();
+    }
+
+    // Filter resources based on selected options
+    function filterResources() {
+      const selectedIndustries = Array.from(document.querySelectorAll('.industry-filter:checked'))
+        .map(checkbox => checkbox.id.toLowerCase());
+        
+      const selectedServices = Array.from(document.querySelectorAll('.service-filter:checked'))
+        .map(checkbox => checkbox.id.toLowerCase());
+        
+      const searchText = document.getElementById('searchInput').value.toLowerCase();
+      
+      const cards = document.querySelectorAll('.resource-card');
+      let visibleCards = [];
+      
+      cards.forEach(card => {
+        const cardIndustries = card.dataset.industries.split(',');
+        const cardServices = card.dataset.services.split(',');
+        const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+        const cardDescription = card.querySelector('p').textContent.toLowerCase();
+        
+        const industryMatch = selectedIndustries.length === 0 || 
+          selectedIndustries.some(industry => cardIndustries.includes(industry));
+          
+        const serviceMatch = selectedServices.length === 0 || 
+          selectedServices.some(service => cardServices.includes(service));
+          
+        const searchMatch = searchText === '' || 
+          cardTitle.includes(searchText) || 
+          cardDescription.includes(searchText);
+        
+        if (industryMatch && serviceMatch && searchMatch) {
+          card.style.display = 'block';
+          visibleCards.push(card);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      if (visibleCards.length < 3) {
+        const hiddenCards = Array.from(cards).filter(card => !visibleCards.includes(card));
+        
+        hiddenCards.sort(() => Math.random() - 0.5);
+        
+        for (let i = 0; i < Math.min(3 - visibleCards.length, hiddenCards.length); i++) {
+          hiddenCards[i].style.display = 'block';
+          visibleCards.push(hiddenCards[i]);
+        }
+      }
+      
+      updateCounts();
+    }
+
+    // Update filter counts and visible resources count
+    function updateCounts() {
+      const industryCount = document.querySelectorAll('.industry-filter:checked').length;
+      const serviceCount = document.querySelectorAll('.service-filter:checked').length;
+      const visibleCount = document.querySelectorAll('.resource-card[style="display: block"]').length;
+      
+      document.getElementById('industryCount').textContent = industryCount;
+      document.getElementById('serviceCount').textContent = serviceCount;
+      document.getElementById('visibleCount').textContent = visibleCount;
+      document.getElementById('totalCount').textContent = resources.length;
+    }
+
+    // Set up event listeners
+    function setupEventListeners() {
+      document.querySelectorAll('.industry-filter, .service-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', filterResources);
+      });
+      
+      document.getElementById('searchInput').addEventListener('input', filterResources);
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+      initResourceGrid();
+      setupEventListeners();
+      filterResources();
+    });
+  </script>
+
+
+  <style>
+    @media (max-width: 768px) {
+      .container { max-width: 100%; margin: 0; border-radius: 0; }
+      header { padding: 15px; }
+      header h1 { font-size: 1.5rem; }
+      header .search-container { max-width: 100%; margin: 10px auto; }
+      header input[type="text"] { padding: 10px 35px 10px 10px; font-size: 12px; }
+      header .fa-search { right: 10px; font-size: 16px; }
+      .filters { flex-direction: column; padding: 10px; }
+      .filter-section { min-width: 100%; margin-bottom: 15px; }
+      .filter-section h3 { font-size: 14px; padding-bottom: 6px; }
+      .filter-options { max-height: 200px; }
+      .filter-options div { padding: 5px; }
+      .filter-options input[type="checkbox"] { width: 14px; height: 14px; }
+      .filter-options label { font-size: 12px; }
+      .resources-section { padding: 15px; }
+      .count-info { font-size: 14px; margin-bottom: 15px; }
+      #resourcesGrid { grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); }
+      .resource-card .header { height: 100px; font-size: 16px; }
+      .resource-card .content { padding: 10px; }
+      .resource-card h3 { font-size: 14px; margin-bottom: 6px; }
+      .resource-card p { font-size: 10px; margin-bottom: 8px; }
+      .resource-card .tags { gap: 4px; margin-bottom: 8px; }
+      .resource-card .tags span { padding: 3px 6px; font-size: 8px; }
+      .resource-card a { font-size: 10px; padding: 6px 10px; }
+      .resource-card a .fa-arrow-right { font-size: 8px; }
+      p { font-size: 14px; max-width: 90%; margin: 15px auto; }
+      .banner { height: 150px; }
+      .banner img { height: 150px; }
+      .banner div { font-size: 18px; }
+    }
+  </style>
+   <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">About Us</h3>
+                    <p class="text-gray-400">Optic Bee Soft Tech provides innovative IT solutions and services to businesses worldwide, helping them achieve their goals.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Hyperion EPM</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">BI & Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Data Warehousing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Contact Info</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94301</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-orange-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-orange-500"></i>
+                            <span>info@opticbee.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2024 Optic Bee Soft Tech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+      <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Hero Slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = '0';
+                dots[index].classList.remove('bg-white');
+                dots[index].classList.add('bg-opacity-50');
+            });
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].style.opacity = '1';
+            dots[currentSlide].classList.add('bg-white');
+            dots[currentSlide].classList.remove('bg-opacity-50');
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto slide
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        showSlide(0); // Initialize first slide
+
+        // --- Geolocation and Location Display ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const locationText = document.getElementById('location-text');
+            const mobileLocationText = document.getElementById('mobile-location-text');
+            const apiKey = 'AIzaSyDqW6tsp_sUG5-Xf6aXFzYuqrvRiGehGXg'; // Your provided API key
+
+            // Helper function to update text on both desktop and mobile views
+            const updateLocationText = (message) => {
+                locationText.textContent = message;
+                if (mobileLocationText) {
+                    mobileLocationText.textContent = message;
+                }
+            };
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`;
+
+                        fetch(geocodeUrl)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                if (data.status === 'OK' && data.results[0]) {
+                                    const addressComponents = data.results[0].address_components;
+                                    let city = '';
+                                    let country = '';
+
+                                    for (const component of addressComponents) {
+                                        if (component.types.includes('locality')) {
+                                            city = component.long_name;
+                                        }
+                                        if (component.types.includes('country')) {
+                                            country = component.long_name;
+                                        }
+                                    }
+                                    
+                                    const locationString = city && country ? `${city}, ${country}` : 'Location Found';
+                                    updateLocationText(locationString);
+
+                                } else {
+                                    updateLocationText('Location Not Found');
+                                    console.error('Geocoding API Error:', data.status, data.error_message);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching geocode data:', error);
+                                updateLocationText('Could Not Fetch Location');
+                            });
+                    },
+                    (error) => {
+                        console.error(`Geolocation error: ${error.message}`);
+                        let errorMessage;
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMessage = 'Location Access Denied';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMessage = 'Location Unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                errorMessage = 'Request Timed Out';
+                                break;
+                            default:
+                                errorMessage = 'Location Error';
+                                break;
+                        }
+                        updateLocationText(errorMessage);
+                    }
+                );
+            } else {
+                updateLocationText("Geolocation Not Supported");
+            }
+
+            // --- NEW --- Mobile Menu Dropdown Toggle --- NEW ---
+            const mobileDropdownToggles = document.querySelectorAll('#mobile-menu .mobile-menu-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent link from navigating anywhere
+                    const submenu = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i.fa-chevron-down');
+                    
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                        submenu.classList.toggle('hidden');
+                        if(icon) {
+                            icon.classList.toggle('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

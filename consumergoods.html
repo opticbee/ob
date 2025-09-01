@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optic Bee Soft Tech - Hyperion & IT Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slider .slide {
+            transition: opacity 1s ease-in-out;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        /* Underline effect for nav items */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #f97316; /* orange-500 */
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-link:hover {
+            color: #f97316;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-[#1e293b] shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+           <!-- Logo -->
+            <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+                <img src="images/oblogo.png" 
+                    alt="Optic Bee Soft Tech" 
+                    style="height: 65px; width: auto; object-fit: contain; margin: -5px 0;">
+                <h2 style="font-size: 1.5rem; color: #FF7F27; font-weight: 600; margin: 0;">
+                OPTIC BEE 
+                </h2>
+            </a>
+            </div>
+
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center space-x-8 text-gray-300">
+                <!-- About Us Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">About Us</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-56">
+                        <li><a href="our_story.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Partners</a></li>
+                        <li><a href="careers.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Careers</a></li>
+                        <li><a href="awards.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                <!-- Regions Dropdown -->
+                <li class="relative dropdown">
+                    <a href="whatwedo.html" class="nav-link font-medium">What we Do</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Services Multi-column Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Services</a>
+                    <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                        <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="advisoryServices.html" class="block text-gray-300 hover:text-orange-500">Advisory Services</a></li>
+                                <li><a href="consultingservices.html" class="block text-gray-300 hover:text-orange-500">Consulting Services</a></li>
+                                <li><a href="ManagedServices.html" class="block text-gray-300 hover:text-orange-500">Managed Services</a></li>
+                                <li><a href="techinical.html" class="block text-gray-300 hover:text-orange-500">Technical Shared Services</a></li>
+                                <li><a href="enterprice_change_management.html" class="block text-gray-300 hover:text-orange-500">Enterprise Change Management</a></li>
+                                <li><a href="anaplan.html" class="block text-gray-300 hover:text-orange-500">Anaplan</a></li>
+                                <li><a href="netsuitepage.html" class="block text-gray-300 hover:text-orange-500">NetSuite</a></li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li><a href="OracleCloudEPM.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                                <li><a href="OracleCloudERP.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                                <li><a href="scm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                                <li><a href="hcm.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                                <li><a href="oracle_clolud_cx.html" class="block text-gray-300 hover:text-orange-500">Oracle Cloud CX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative dropdown">
+                    <a href="development.html" class="nav-link font-medium">Development</a>
+                    <!-- <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-4 py-2 w-48">
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">North America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Latin America</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <!-- Industries Multi-column Dropdown -->
+                 <li class="relative dropdown">
+                     <a href="#" class="nav-link font-medium">Industries</a>
+                     <div class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 p-6 w-max">
+                         <div class="flex space-x-12">
+                            <ul class="space-y-2">
+                                <li><a href="retail.html" class="block text-gray-300 hover:text-orange-500">Retail & Manufacturing</a></li>
+                                <li><a href="professionalServices.html" class="block text-gray-300 hover:text-orange-500">Professional Services</a></li>
+                                <li><a href="hightech-lifescience.html" class="block text-gray-300 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                                <li><a href="consumergoods.html" class="block text-gray-300 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                                <li><a href="financial-services.html" class="block text-gray-300 hover:text-orange-500">Financial Services</a></li>
+                            </ul>
+                         </div>
+                    </div>
+                </li>
+                <!-- Resources Dropdown -->
+                <li class="relative dropdown">
+                    <a href="#" class="nav-link font-medium">Resources</a>
+                    <ul class="dropdown-menu absolute hidden bg-[#1e293b] shadow-lg rounded-md mt-1 py-2 w-48">
+                        <li><a href="customer.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Customer Success</a></li>
+                        <li><a href="insight.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Insights</a></li>
+                        <li><a href="search.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700">Search</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right side of Navbar -->
+             <div class="hidden md:flex items-center space-x-4">
+                 <!-- Location Display (Replaces Language Selector) -->
+                <div id="location-display" class="flex items-center text-gray-300">
+                    <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                    <span id="location-text">Fetching location...</span>
+                </div>
+                 <!-- Search Bar -->
+                 <div class="relative">
+                     <input type="text" placeholder="Search..." class="bg-gray-700 text-white placeholder-gray-400 rounded-full py-1 px-4 w-40 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                     <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white">
+                        <i class="fas fa-search"></i>
+                     </button>
+                 </div>
+             </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-[#1e293b] text-gray-300">
+            <ul class="flex flex-col space-y-3">
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>About Us</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="our_story.html" class="block text-gray-400 hover:text-orange-500">Our Story</a></li>
+                        <li><a href="our_culture.html" class="block text-gray-400 hover:text-orange-500">Our Culture</a></li>
+                        <li><a href="our_community _impact.html" class="block text-gray-400 hover:text-orange-500">Our Community Impact</a></li>
+                        <li><a href="our_partners.html" class="block text-gray-400 hover:text-orange-500">Our Partners</a></li>
+                        <li><a href="careers.html" class="block text-gray-400 hover:text-orange-500"> Our Careers</a></li>
+                        <li><a href="awards.html" class="block text-gray-400 hover:text-orange-500">Our Awards</a></li>
+                        <li><a href="contact_us.html" class="block text-gray-400 hover:text-orange-500">Our Contact Info</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="whatwedo.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>What We Do</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="advisoryServices.html" class="block text-gray-400 hover:text-orange-500">Advisory Services</a></li>
+                        <li><a href="consultancy.html" class="block text-gray-400 hover:text-orange-500">Consulting Services</a></li>
+                        <li><a href="ManagedServices.html" class="block text-gray-400 hover:text-orange-500">Managed Services</a></li>
+                        <li><a href="techinical.html" class="block text-gray-400 hover:text-orange-500">Technical Shared Services</a></li>
+                        <li><a href="enterprice_change_management.html" class="block text-gray-400 hover:text-orange-500">Enterprise Change Management</a></li>
+                        <li><a href="anaplan.html" class="block text-gray-400 hover:text-orange-500">Anaplan</a></li>
+                        <li><a href="netsuitepage.html" class="block text-gray-400 hover:text-orange-500">NetSuite</a></li>
+                        <li><a href="OracleCloudEPM.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud EPM</a></li>
+                        <li><a href="OracleCloudERP.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="scm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud SCM</a></li>
+                        <li><a href="hcm.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud HCM</a></li>
+                        <li><a href="oracle_clolud_cx.html" class="block text-gray-400 hover:text-orange-500">Oracle Cloud CX</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="development.html" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Developments</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                    <!-- <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">North America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Latin America</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-orange-500">Asia Pacific</a></li>
+                    </ul> -->
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Industries</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="retail.html" class="block text-gray-400 hover:text-orange-500">Retail & Manufacturing</a></li>
+                        <li><a href="professionalServices.html" class="block text-gray-400 hover:text-orange-500">Professional Services</a></li>
+                        <li><a href="hightechLifescience.html" class="block text-gray-400 hover:text-orange-500">High Tech & Life Sciences</a></li>
+                        <li><a href="consumergoods.html" class="block text-gray-400 hover:text-orange-500">Consumer Packaged Goods</a></li>
+                        <li><a href="financial-services.html" class="block text-gray-400 hover:text-orange-500">Financial Services</a></li>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="#" class="font-medium block mobile-menu-toggle flex justify-between items-center">
+                        <span>Resources</span>
+                        <i class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </a>
+                     <ul class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                        <li><a href="customer.html" class="block text-gray-400 hover:text-orange-500">Customer Success</a></li>
+                        <li><a href="insight.html" class="block text-gray-400 hover:text-orange-500">Insights</a></li>
+                        <li><a href="search.html" class="block text-gray-400 hover:text-orange-500">Search</a></li>
+                    </ul>
+                </li>
+                 <!-- Mobile Location Display -->
+                <li class="pt-3 mt-3 border-t border-gray-700">
+                    <div id="mobile-location-display" class="flex items-center text-gray-300">
+                        <i class="fas fa-map-marker-alt mr-2 text-orange-500"></i>
+                        <span id="mobile-location-text">Fetching location...</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <style>
+        /* CSS Variables for a consistent and easily themeable design */
+        :root {
+            --primary-color: #ff7f50; /* A vibrant Coral */
+            --secondary-color: #0a4f6b; /* Deep Sea Blue */
+            --accent-color: #f7c548; /* Goldenrod Yellow */
+            --text-color-dark: #333333;
+            --text-color-light: #f8f9fa;
+            --background-light: #ffffff;
+            --background-medium: #f1f5f9;
+            --border-color: #e2e8f0;
+            --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --border-radius-sm: 0.375rem; /* 6px */
+            --border-radius-lg: 0.75rem; /* 12px */
+            --transition-speed: 0.3s ease-in-out;
+        }
+
+        /* General Body Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color-dark);
+            background-color: var(--background-light);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Main Container for the page content */
+        .cpg-main-container {
+            width: 100%;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+        }
+
+        /* Utility class for section containers */
+        .cpg-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        /* General Section Styling */
+        .cpg-section {
+            padding-top: 5rem;    /* 80px */
+            padding-bottom: 5rem; /* 80px */
+        }
+        
+        .cpg-section.cpg-bg-medium {
+            background-color: var(--background-medium);
+        }
+
+        /* Section Title Styling */
+        .cpg-section-title {
+            text-align: center;
+            margin-bottom: 4rem; /* 64px */
+        }
+
+        .cpg-section-title .cpg-subtitle {
+            font-size: 1.125rem; /* 18px */
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .cpg-section-title h2 {
+            font-size: 2.5rem; /* 40px */
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cpg-section-title p.cpg-description {
+            font-size: 1.125rem; /* 18px */
+            color: #64748b;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Section */
+        .cpg-hero {
+            position: relative;
+            background-color: var(--secondary-color);
+            color: var(--text-color-light);
+            padding: 8rem 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .cpg-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=1800&q=80') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .cpg-hero .cpg-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cpg-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .cpg-hero p {
+            font-size: 1.375rem; /* 22px */
+            max-width: 800px;
+            margin: 0 auto 2.5rem auto;
+            opacity: 0.9;
+        }
+
+        /* Button Styling */
+        .cpg-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all var(--transition-speed);
+            box-shadow: var(--shadow-light);
+            border: 2px solid transparent;
+        }
+
+        .cpg-btn:hover {
+            background-color: #ff6347; /* Slightly darker coral */
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .cpg-btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .cpg-btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+        }
+
+        /* Challenges Section Grid */
+        .cpg-challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .cpg-challenge-card {
+            background: var(--background-light);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-light);
+            padding: 2.5rem;
+            text-align: center;
+            transition: all var(--transition-speed);
+            border: 1px solid var(--border-color);
+        }
+
+        .cpg-challenge-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .cpg-challenge-card .cpg-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            background-color: #fff5ed; /* Light coral background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cpg-challenge-card .cpg-icon-wrapper svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--primary-color);
+        }
+
+        .cpg-challenge-card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cpg-challenge-card p {
+            font-size: 1rem;
+            color: #64748b;
+        }
+        
+        /* Solution Section (Feature List) */
+        .cpg-feature-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cpg-feature-section .cpg-image-container {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .cpg-feature-section .cpg-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cpg-feature-section .cpg-content h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cpg-feature-section .cpg-content .cpg-description-text {
+             font-size: 1.1rem;
+             margin-bottom: 2rem;
+             color: #475569;
+        }
+
+        .cpg-feature-section .cpg-feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cpg-feature-section .cpg-feature-list li {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .cpg-feature-section .cpg-feature-list .cpg-tick-icon {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            padding: 4px;
+        }
+
+        /* Services Section (Tabs) */
+        .cpg-services-tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .cpg-tab-btn {
+            padding: 1rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: #475569;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            position: relative;
+            border-bottom: 4px solid transparent;
+        }
+
+        .cpg-tab-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .cpg-tab-btn.active {
+            color: var(--secondary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .cpg-tab-content {
+            display: none;
+        }
+
+        .cpg-tab-content.active {
+            display: block;
+        }
+
+        .cpg-tab-pane {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        
+        .cpg-tab-pane h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .cpg-tab-pane p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .cpg-tab-pane ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cpg-tab-pane li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .cpg-tab-pane li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .cpg-tab-pane .cpg-image-container {
+             border-radius: var(--border-radius-lg);
+             overflow: hidden;
+        }
+        
+        .cpg-tab-pane .cpg-image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Advantage Section */
+        .cpg-advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cpg-advantage-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .cpg-advantage-item .cpg-icon-circle {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            color: var(--text-color-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cpg-advantage-item .cpg-icon-circle svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .cpg-advantage-item h4 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .cpg-advantage-item p {
+            margin-top: 0;
+            color: #64748b;
+        }
+
+        /* CTA Section */
+        .cpg-cta-section {
+            background: linear-gradient(45deg, var(--secondary-color), #1a7e9e);
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 6rem 1.5rem;
+            border-radius: var(--border-radius-lg);
+            margin: 5rem auto;
+            max-width: 1200px;
+        }
+        
+        .cpg-cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cpg-cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            opacity: 0.9;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 1024px) {
+            .cpg-feature-section, .cpg-tab-pane {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .cpg-tab-pane .cpg-image-container {
+                /* On smaller screens, the image can come first in some tabs */
+                order: -1;
+            }
+
+            .cpg-hero h1 {
+                font-size: 3rem;
+            }
+
+            .cpg-hero p {
+                font-size: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cpg-section {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            .cpg-hero h1 {
+                font-size: 2.5rem;
+            }
+            .cpg-section-title h2 {
+                font-size: 2rem;
+            }
+            .cpg-services-tabs-container {
+                gap: 0.5rem;
+            }
+            .cpg-tab-btn {
+                font-size: 1rem;
+                padding: 0.8rem 1rem;
+            }
+        }
+        
+         @media (max-width: 480px) {
+            .cpg-hero {
+                padding: 6rem 0;
+            }
+            .cpg-hero h1 {
+                font-size: 2rem;
+            }
+            .cpg-hero p {
+                font-size: 1.1rem;
+            }
+            .cpg-challenge-card {
+                padding: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- This is the main container for all the content of this specific page -->
+    <main class="cpg-main-container">
+        
+        <!-- Section 1: Hero -->
+        <!-- An impactful introduction to capture user attention immediately -->
+        <section class="cpg-hero">
+            <div class="cpg-container">
+                <h1>Navigate the Future of CPG with Oracle EPM</h1>
+                <p>Optic Bee Soft Tech empowers Consumer Packaged Goods leaders to master market dynamics, streamline operations, and accelerate profitable growth through intelligent planning and analytics.</p>
+                <a href="#contact" class="cpg-btn">Book Your EPM Strategy Call</a>
+            </div>
+        </section>
+
+        <!-- Section 2: Industry Challenges -->
+        <!-- This section demonstrates our understanding of the client's specific pain points -->
+        <section class="cpg-section cpg-bg-medium">
+            <div class="cpg-container">
+                <div class="cpg-section-title">
+                    <span class="cpg-subtitle">The CPG Landscape</span>
+                    <h2>Tackling Your Toughest Challenges</h2>
+                    <p class="cpg-description">In an industry of razor-thin margins and relentless change, CPG companies face a perfect storm of hurdles. We provide the tools to turn these challenges into opportunities.</p>
+                </div>
+                <div class="cpg-challenges-grid">
+                    <!-- Challenge Card 1: Supply Chain -->
+                    <div class="cpg-challenge-card">
+                        <div class="cpg-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 003.375-3.375h1.5a1.125 1.125 0 011.125 1.125v-1.5a3.375 3.375 0 00-3.375-3.375H3.375V5.625c0-.621.504-1.125 1.125-1.125h4.5" />
+                            </svg>
+                        </div>
+                        <h3>Supply Chain Volatility</h3>
+                        <p>From sourcing disruptions to fluctuating logistics costs, managing inventory and demand is more complex than ever. Lack of visibility leads to stockouts or costly overstock.</p>
+                    </div>
+                    <!-- Challenge Card 2: Margin Pressure -->
+                    <div class="cpg-challenge-card">
+                        <div class="cpg-icon-wrapper">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414-.336.75-.75.75h-.75m0-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3>Intense Margin Pressure</h3>
+                        <p>Rising input costs, fierce price competition, and retailer negotiations squeeze profitability. Accurate cost-to-serve and profitability analysis are non-negotiable.</p>
+                    </div>
+                    <!-- Challenge Card 3: Consumer Behavior -->
+                    <div class="cpg-challenge-card">
+                        <div class="cpg-icon-wrapper">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9A2.25 2.25 0 004.5 18.75z" />
+                            </svg>
+                        </div>
+                        <h3>Shifting Consumer Demands</h3>
+                        <p>The rise of D2C, private labels, and demand for sustainable products requires agile innovation and marketing. Predicting trends is key to staying relevant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Our Solution -->
+        <!-- This section introduces Oracle EPM as the answer to the previously mentioned challenges -->
+        <section class="cpg-section">
+            <div class="cpg-container">
+                <div class="cpg-feature-section">
+                    <div class="cpg-image-container">
+                        <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=1200&q=80" alt="Team collaborating around a digital dashboard showing business analytics">
+                    </div>
+                    <div class="cpg-content">
+                        <span class="cpg-subtitle">The Optic Bee Solution</span>
+                        <h3>Connected Planning for CPG Excellence</h3>
+                        <p class="cpg-description-text">We implement Oracle's EPM Cloud to create a single, intelligent platform that connects your entire organization—from finance and sales to marketing and supply chain.</p>
+                        <ul class="cpg-feature-list">
+                            <li>
+                                <span class="cpg-tick-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg></span>
+                                <div><strong>Unified View of Performance:</strong> Break down data silos to get a single source of truth for all your planning, forecasting, and reporting needs.</div>
+                            </li>
+                            <li>
+                                <span class="cpg-tick-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg></span>
+                                <div><strong>AI-Powered Foresight:</strong> Leverage predictive analytics and machine learning to create more accurate demand forecasts and run what-if scenarios in real-time.</div>
+                            </li>
+                            <li>
+                                <span class="cpg-tick-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg></span>
+                                <div><strong>Enhanced Agility:</strong> Respond faster to market shifts, competitor actions, and supply chain disruptions with dynamic, driver-based planning capabilities.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Detailed EPM Services with Tabs -->
+        <!-- This section provides depth on our specific offerings, using an interactive tab component -->
+        <section class="cpg-section cpg-bg-medium">
+            <div class="cpg-container">
+                <div class="cpg-section-title">
+                    <span class="cpg-subtitle">Our Oracle EPM Services</span>
+                    <h2>A Tailored Approach for the CPG Industry</h2>
+                    <p class="cpg-description">We offer a full spectrum of Oracle EPM implementation and advisory services, customized for the unique demands of CPG manufacturers and distributors.</p>
+                </div>
+
+                <!-- Tab Buttons -->
+                <div class="cpg-services-tabs-container">
+                    <button class="cpg-tab-btn active" onclick="openTab(event, 'planning')">Planning & Forecasting</button>
+                    <button class="cpg-tab-btn" onclick="openTab(event, 'consolidation')">Financial Close</button>
+                    <button class="cpg-tab-btn" onclick="openTab(event, 'profitability')">Profitability & Cost</button>
+                </div>
+
+                <!-- Tab Content Panels -->
+                <div id="planning" class="cpg-tab-content active">
+                    <div class="cpg-tab-pane">
+                        <div class="cpg-content">
+                            <h3>Integrated Business Planning & Forecasting</h3>
+                            <p>Align strategic goals with operational execution. We help you build a connected planning ecosystem for superior demand forecasting, effective trade promotion management, and agile supply chain response.</p>
+                            <ul>
+                                <li>Statistical and ML-driven demand planning.</li>
+                                <li>Trade promotion planning, execution, and ROI analysis.</li>
+                                <li>Sales & Operations Planning (S&OP) alignment.</li>
+                                <li>Driver-based "what-if" scenario modeling for pricing and volume.</li>
+                            </ul>
+                        </div>
+                        <div class="cpg-image-container">
+                            <img src="https://images.unsplash.com/photo-1634733369528-2e1a38a3163a?auto=format&fit=crop&w=1200&q=80" alt="Chart showing sales forecast and growth projection">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="consolidation" class="cpg-tab-content">
+                    <div class="cpg-tab-pane">
+                        <div class="cpg-content">
+                            <h3>Accelerated Financial Consolidation & Close</h3>
+                            <p>Streamline your period-end close from weeks to days. Our solutions automate complex consolidations, intercompany eliminations, and currency conversions, ensuring a fast, accurate, and auditable close process.</p>
+                             <ul>
+                                <li>Automated data loading and validation from source systems.</li>
+                                <li>Streamlined intercompany transaction matching and elimination.</li>
+                                <li>Comprehensive close process management and dashboards.</li>
+                                <li>Ensured data accuracy for internal and external reporting.</li>
+                            </ul>
+                        </div>
+                        <div class="cpg-image-container">
+                             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80" alt="Finance team reviewing reports in a modern office">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="profitability" class="cpg-tab-content">
+                    <div class="cpg-tab-pane">
+                         <div class="cpg-content">
+                            <h3>Granular Profitability & Cost Management</h3>
+                            <p>Uncover the true drivers of your profitability. We build sophisticated allocation models to give you clear visibility into SKU, brand, customer, and channel profitability, enabling smarter portfolio and pricing decisions.</p>
+                            <ul>
+                                <li>Detailed cost-to-serve analysis for every customer.</li>
+                                <li>"Pocket margin" analysis to identify profit leakage.</li>
+                                <li>Activity-based costing for accurate overhead allocation.</li>
+                                <li>Insights to optimize product mix and eliminate unprofitable SKUs.</li>
+                            </ul>
+                        </div>
+                        <div class="cpg-image-container">
+                             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Analyst pointing at a graph showing profitability metrics">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 5: Why Choose Us -->
+        <!-- This section builds trust and highlights our key differentiators -->
+        <section class="cpg-section">
+            <div class="cpg-container">
+                 <div class="cpg-section-title">
+                    <span class="cpg-subtitle">The Optic Bee Advantage</span>
+                    <h2>Your Partner in Performance Transformation</h2>
+                    <p class="cpg-description">We combine deep industry knowledge with unparalleled Oracle EPM expertise to deliver solutions that drive real business outcomes.</p>
+                </div>
+                <div class="cpg-advantage-grid">
+                    <div class="cpg-advantage-item">
+                        <div class="cpg-icon-circle">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <div>
+                            <h4>Deep CPG Expertise</h4>
+                            <p>Our consultants speak your language, understanding the nuances of trade spend, demand signals, and supply chain complexities.</p>
+                        </div>
+                    </div>
+                     <div class="cpg-advantage-item">
+                        <div class="cpg-icon-circle">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+                        </div>
+                        <div>
+                            <h4>Certified Oracle Experts</h4>
+                            <p>We hold the highest levels of Oracle certification, ensuring your solution is built on best practices for performance and scalability.</p>
+                        </div>
+                    </div>
+                     <div class="cpg-advantage-item">
+                        <div class="cpg-icon-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
+                        </div>
+                        <div>
+                            <h4>Proven Methodology</h4>
+                            <p>Our agile implementation approach ensures faster time-to-value, stakeholder alignment, and a solution that adapts to your evolving needs.</p>
+                        </div>
+                    </div>
+                     <div class="cpg-advantage-item">
+                        <div class="cpg-icon-circle">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>
+                        </div>
+                        <div>
+                            <h4>Focus on Business Outcomes</h4>
+                            <p>We measure our success by your success—improved forecast accuracy, faster close cycles, and higher margins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Call to Action -->
+        <!-- A final, clear prompt for the user to take the next step -->
+        <section id="contact">
+             <div class="cpg-container">
+                <div class="cpg-cta-section">
+                    <h2>Ready to Elevate Your Performance?</h2>
+                    <p>Let's explore how Optic Bee Soft Tech can tailor an Oracle EPM solution to solve your unique challenges and unlock your growth potential. Schedule a complimentary, no-obligation strategy session with our CPG experts today.</p>
+                    <a href="#" class="cpg-btn">Schedule Your Free Consultation</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">About Us</h3>
+                    <p class="text-gray-400">Optic Bee Soft Tech provides innovative IT solutions and services to businesses worldwide, helping them achieve their goals.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Hyperion EPM</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Oracle Cloud ERP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">BI & Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Data Warehousing</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-widget">
+                    <h3 class="text-xl font-semibold mb-4 border-b-2 border-orange-500 pb-2 inline-block">Contact Info</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-orange-500"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94301</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3 text-orange-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-orange-500"></i>
+                            <span>info@opticbee.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2024 Optic Bee Soft Tech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript for Tab functionality -->
+    <script>
+        // A simple and efficient function to handle the tab switching logic.
+        function openTab(evt, tabName) {
+            // Get all elements with class="cpg-tab-content" and hide them
+            const tabcontent = document.getElementsByClassName("cpg-tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Get all elements with class="cpg-tab-btn" and remove the "active" class
+            const tablinks = document.getElementsByClassName("cpg-tab-btn");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            const currentTab = document.getElementById(tabName);
+            if (currentTab) {
+                currentTab.style.display = "block";
+                currentTab.classList.add("active");
+            }
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+   <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Hero Slider
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = '0';
+                dots[index].classList.remove('bg-white');
+                dots[index].classList.add('bg-opacity-50');
+            });
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].style.opacity = '1';
+            dots[currentSlide].classList.add('bg-white');
+            dots[currentSlide].classList.remove('bg-opacity-50');
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto slide
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+
+        showSlide(0); // Initialize first slide
+
+        // --- Geolocation and Location Display ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const locationText = document.getElementById('location-text');
+            const mobileLocationText = document.getElementById('mobile-location-text');
+            const apiKey = 'AIzaSyDqW6tsp_sUG5-Xf6aXFzYuqrvRiGehGXg'; // Your provided API key
+
+            // Helper function to update text on both desktop and mobile views
+            const updateLocationText = (message) => {
+                locationText.textContent = message;
+                if (mobileLocationText) {
+                    mobileLocationText.textContent = message;
+                }
+            };
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}`;
+
+                        fetch(geocodeUrl)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                if (data.status === 'OK' && data.results[0]) {
+                                    const addressComponents = data.results[0].address_components;
+                                    let city = '';
+                                    let country = '';
+
+                                    for (const component of addressComponents) {
+                                        if (component.types.includes('locality')) {
+                                            city = component.long_name;
+                                        }
+                                        if (component.types.includes('country')) {
+                                            country = component.long_name;
+                                        }
+                                    }
+                                    
+                                    const locationString = city && country ? `${city}, ${country}` : 'Location Found';
+                                    updateLocationText(locationString);
+
+                                } else {
+                                    updateLocationText('Location Not Found');
+                                    console.error('Geocoding API Error:', data.status, data.error_message);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error fetching geocode data:', error);
+                                updateLocationText('Could Not Fetch Location');
+                            });
+                    },
+                    (error) => {
+                        console.error(`Geolocation error: ${error.message}`);
+                        let errorMessage;
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMessage = 'Location Access Denied';
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMessage = 'Location Unavailable';
+                                break;
+                            case error.TIMEOUT:
+                                errorMessage = 'Request Timed Out';
+                                break;
+                            default:
+                                errorMessage = 'Location Error';
+                                break;
+                        }
+                        updateLocationText(errorMessage);
+                    }
+                );
+            } else {
+                updateLocationText("Geolocation Not Supported");
+            }
+
+            // --- NEW --- Mobile Menu Dropdown Toggle --- NEW ---
+            const mobileDropdownToggles = document.querySelectorAll('#mobile-menu .mobile-menu-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent link from navigating anywhere
+                    const submenu = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i.fa-chevron-down');
+                    
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                        submenu.classList.toggle('hidden');
+                        if(icon) {
+                            icon.classList.toggle('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
